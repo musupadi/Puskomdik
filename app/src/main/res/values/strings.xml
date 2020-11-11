@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">Puskomdik</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="alamat_sekolah">Jln Darul Qur\'an Jln.Sindang Barang Pengkolan,RT.03/RW02,LOJI,Kec.Bogor.,Kota Bogor Jawa Barat 16117</string>
+    <string name="nomor_telpon">082762628987</string>
+    <string name="rekening_sekolah">9867655545897</string>
+    <string name="nama_bank">BCA</string>
+    <string name="nama_pemegang_bank">Anindita</string>
+    <string name="nama_yayasan">-</string>
+    <string name="nisnnpsn">-</string>
+    <string name="tahun_operasi">-</string>
+    <string name="status_sekolah">-</string>
+    <string name="sk_kelambangan">-</string>
+    <string name="tahun_didirikan">2015</string>
+    <string name="status_tanah">-</string>
+    <string name="luas_tanah">3000 Meter</string>
+    <string-array name="Izin">
+        <item>Sakit</item>
+        <item>Izin</item>
+    </string-array>
 </resources>

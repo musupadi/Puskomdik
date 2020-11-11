@@ -1,4 +1,4 @@
-package com.destinyapp.puskomdik;
+package com.destinyapp.puskomdik.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,7 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.os.Handler;
 
+import com.destinyapp.puskomdik.R;
 import com.destinyapp.puskomdik.SharedPreferance.DB_Helper;
 
 public class MainActivity extends AppCompatActivity {

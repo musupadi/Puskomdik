@@ -40,7 +40,8 @@
             <ImageView
                 android:layout_weight="1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:src="@drawable/kita_belajar"/>
         </LinearLayout>
     </LinearLayout>
     <ImageView
@@ -48,7 +49,7 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_alignParentBottom="true"
-        />
+        android:src="@drawable/bg_login"/>
 
     <LinearLayout
         android:layout_marginTop="250dp"
@@ -103,18 +104,26 @@
                 android:inputType="text|textPassword"
                 android:textSize="20sp"/>
         </com.google.android.material.textfield.TextInputLayout>
-        <Button
-            android:theme="@style/AppThemeNoAction"
-            android:id="@+id/btnLogin"
+        <LinearLayout
             android:layout_marginTop="20dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:text="Login"
-            android:background="@drawable/btn_rounded_white"
+            android:id="@+id/linearLogin"
             android:gravity="center"
+            android:textColor="@color/colorPrimary"
             android:layout_gravity="center"
+            android:background="@drawable/btn_rounded"
             android:layout_marginRight="50dp"
-            android:layout_marginLeft="50dp"/>
+            android:layout_marginLeft="50dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Login"
+                android:textColor="@color/colorPrimary"/>
+        </LinearLayout>
         <TextView
             android:visibility="gone"
             android:layout_width="match_parent"
