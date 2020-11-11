@@ -40,8 +40,8 @@ public class StrukturOraganisasiActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        destiny = new Destiny();
         setContentView(R.layout.activity_struktur_oraganisasi);
+        destiny = new Destiny();
         Back = findViewById(R.id.relativeBack);
         recycler = findViewById(R.id.recyclerView);
         dbHelper = new DB_Helper(this);

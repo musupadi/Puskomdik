@@ -204,6 +204,7 @@
                                 android:text="Jenis Kelamin"
                                 android:textColor="@color/colorBlack"/>
                             <RadioGroup
+                                android:theme="@style/Theme.Puskomdik"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/radGroupKelamin"
@@ -385,6 +386,7 @@
                                 android:text="Akta Kelahiran Fotocopy"
                                 android:textColor="@color/colorBlack"/>
                             <RadioGroup
+                                android:theme="@style/Theme.Puskomdik"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/radGroupAktaKelahiran"
@@ -458,6 +460,7 @@
                                 android:text="Kartu Keluarga Fotocopy"
                                 android:textColor="@color/colorBlack"/>
                             <RadioGroup
+                                android:theme="@style/Theme.Puskomdik"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/radGroupKartuKeluarga"
@@ -526,6 +529,7 @@
                                 android:text="Mengisi Data Pribadi Siswa"
                                 android:textColor="@color/colorBlack"/>
                             <RadioGroup
+                                android:theme="@style/Theme.Puskomdik"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/radGroupDataPribadiSiswa"
@@ -594,6 +598,7 @@
                                 android:text="Pas Foto Ukuran 3X4"
                                 android:textColor="@color/colorBlack"/>
                             <RadioGroup
+                                android:theme="@style/Theme.Puskomdik"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/radGroupFoto"

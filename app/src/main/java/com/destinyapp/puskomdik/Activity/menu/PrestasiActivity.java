@@ -42,7 +42,7 @@ public class PrestasiActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         destiny = new Destiny();
-        setContentView(R.layout.activity_struktur_oraganisasi);
+        setContentView(R.layout.activity_prestasi);
         Back = findViewById(R.id.relativeBack);
         recycler = findViewById(R.id.recyclerView);
         dbHelper = new DB_Helper(this);
