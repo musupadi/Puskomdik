@@ -344,6 +344,7 @@
                             android:id="@+id/linearTeman"
                             android:layout_margin="5dp">
                             <ImageView
+                                android:src="@drawable/teman"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"/>
@@ -689,6 +690,7 @@
                             android:layout_margin="5dp"
                             android:id="@+id/linearRaks">
                             <ImageView
+                                android:src="@drawable/raks"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"/>

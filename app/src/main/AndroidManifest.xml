@@ -27,7 +27,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Puskomdik"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Activity.menu.EskulActivity"></activity>
+        <activity android:name=".Activity.menu.EskulActivity"
+            android:theme="@style/AppThemeNoAction"></activity>
         <activity
             android:name=".Activity.menu.PPDBActivity"
             android:theme="@style/AppThemeNoAction" />

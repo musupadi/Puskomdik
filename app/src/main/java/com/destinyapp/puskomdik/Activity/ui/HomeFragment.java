@@ -26,6 +26,7 @@ import com.destinyapp.puskomdik.Activity.Adapter.AdapterKabarBerita;
 import com.destinyapp.puskomdik.Activity.Adapter.AdapterKegiatan;
 import com.destinyapp.puskomdik.Activity.LoginActivity;
 import com.destinyapp.puskomdik.Activity.menu.AgendaSekolahActivity;
+import com.destinyapp.puskomdik.Activity.menu.EskulActivity;
 import com.destinyapp.puskomdik.Activity.menu.PPDBActivity;
 import com.destinyapp.puskomdik.Activity.menu.PrestasiActivity;
 import com.destinyapp.puskomdik.Activity.menu.ProfilSekolahActivity;
@@ -49,7 +50,7 @@ public class HomeFragment extends Fragment {
     Switch SwitchMasuk;
     TextView CheckMasuk;
     LinearLayout ProfilSekolah,AgendaSekolah,Eskul,Loker,KabarBerita,Prestasi,PPDB,StrukturSekolah,JadwalPelajaran,LihatSemua;
-    LinearLayout DProfilSekolah,DAgendaSekolah,DPrestasi,DPPDB,DStrukturSekolah,DJadwalPelajaran,DEvadir,DMediaPembelajaran,DTugas,DGuru,DBiayaAkademik,DPembayaran,DROB;
+    LinearLayout DProfilSekolah,DAgendaSekolah,DEskul,DLoker,DKabarBerita,DPrestasi,DPPDB,DStrukturSekolah,DJadwalPelajaran,DKehadiran,DEHadir,DTugas,DTeman,DUjian,DEraport;
     //Dialog
     Dialog dialog;
     Button Kembali;
@@ -213,11 +214,20 @@ public class HomeFragment extends Fragment {
     private void DIALOG(){
         DProfilSekolah = dialog.findViewById(R.id.linearProfilSekolah);
         DAgendaSekolah = dialog.findViewById(R.id.linearAgendaSekolah);
+        DEskul = dialog.findViewById(R.id.linearEskul);
+        DLoker = dialog.findViewById(R.id.linearLoker);
+        DKabarBerita = dialog.findViewById(R.id.linearKabarSekolah);
         DPrestasi = dialog.findViewById(R.id.linearPrestasi);
         DPPDB = dialog.findViewById(R.id.linearPPDB);
         DStrukturSekolah = dialog.findViewById(R.id.linearStrukturOrganisasi);
         DJadwalPelajaran = dialog.findViewById(R.id.linearJadwalPelajaran);
-        DBiayaAkademik = dialog.findViewById(R.id.linearBiayaAkademik);
+        DKehadiran = dialog.findViewById(R.id.linearKehadiran);
+        DEHadir = dialog.findViewById(R.id.linearEhadir);
+        DTugas = dialog.findViewById(R.id.linearTugas);
+        DTeman = dialog.findViewById(R.id.linearTeman);
+        DUjian = dialog.findViewById(R.id.linearUjian);
+        DEraport = dialog.findViewById(R.id.linearERaport);
+
     }
     private void ONCLICKDIALOG(){
         DProfilSekolah.setOnClickListener(new View.OnClickListener() {
@@ -232,6 +242,14 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), AgendaSekolahActivity.class);
+                startActivity(intent);
+                getActivity().finish();
+            }
+        });
+        DEskul.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), EskulActivity.class);
                 startActivity(intent);
                 getActivity().finish();
             }
@@ -274,6 +292,14 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), AgendaSekolahActivity.class);
+                startActivity(intent);
+                getActivity().finish();
+            }
+        });
+        Eskul.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), EskulActivity.class);
                 startActivity(intent);
                 getActivity().finish();
             }

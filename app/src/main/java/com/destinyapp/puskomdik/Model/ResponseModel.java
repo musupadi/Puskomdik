@@ -22,6 +22,8 @@ public class ResponseModel {
     @Nullable
     List<DataModel> data;
 
+
+
     public String getStatusCode() {
         return statusCode;
     }

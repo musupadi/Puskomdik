@@ -27,4 +27,10 @@ public interface ApiRequest {
     @GET("prestasi")
     Call<ResponseModel> Prestasi(@Header("Authorization") String authHeader);
 
+    @GET("ekskul?self=true")
+    Call<ResponseModel> EskulAll(@Header("Authorization") String authHeader);
+
+    @GET("ekskul_self")
+    Call<ResponseModel> EskulSelf(@Header("Authorization") String authHeader);
+
 }
