@@ -280,7 +280,6 @@
                                             android:textSize="10sp"
                                             android:textStyle="bold" />
                                     </LinearLayout>
-
                                     <LinearLayout
                                         android:id="@+id/linearAgendaSekolah"
                                         android:layout_width="match_parent"
@@ -306,6 +305,92 @@
                                             android:textSize="10sp"
                                             android:textStyle="bold" />
                                     </LinearLayout>
+                                    <LinearLayout
+                                        android:id="@+id/linearEskul"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_margin="5dp"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical">
+
+                                        <ImageView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:src="@drawable/eskul" />
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="2"
+                                            android:fontFamily="@font/roboto"
+                                            android:gravity="center|top"
+                                            android:text="Eskul"
+                                            android:textColor="@color/colorBlack"
+                                            android:textSize="10sp"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:id="@+id/linearLoker"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_margin="5dp"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical">
+
+                                        <ImageView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:src="@drawable/loker" />
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="2"
+                                            android:fontFamily="@font/roboto"
+                                            android:gravity="center|top"
+                                            android:text="Loker"
+                                            android:textColor="@color/colorBlack"
+                                            android:textSize="10sp"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+                                    <LinearLayout
+                                        android:id="@+id/linearKabarSekolah"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_margin="5dp"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical">
+
+                                        <ImageView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:src="@drawable/kabar_sekolah" />
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="2"
+                                            android:fontFamily="@font/roboto"
+                                            android:gravity="center|top"
+                                            android:text="Kabar Sekolah"
+                                            android:textColor="@color/colorBlack"
+                                            android:textSize="10sp"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+
+
+
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="100dp"
+                                    android:orientation="horizontal">
 
                                     <LinearLayout
                                         android:id="@+id/linearPrestasi"
@@ -332,7 +417,6 @@
                                             android:textSize="10sp"
                                             android:textStyle="bold" />
                                     </LinearLayout>
-
                                     <LinearLayout
                                         android:id="@+id/linearPPDB"
                                         android:layout_width="match_parent"
@@ -358,7 +442,6 @@
                                             android:textSize="10sp"
                                             android:textStyle="bold" />
                                     </LinearLayout>
-
                                     <LinearLayout
                                         android:id="@+id/linearStrukturOrganisasi"
                                         android:layout_width="match_parent"
@@ -384,13 +467,6 @@
                                             android:textSize="10sp"
                                             android:textStyle="bold" />
                                     </LinearLayout>
-                                </LinearLayout>
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="100dp"
-                                    android:orientation="horizontal">
-
                                     <LinearLayout
                                         android:id="@+id/linearJadwalPelajaran"
                                         android:layout_width="match_parent"
@@ -416,85 +492,6 @@
                                             android:textSize="10sp"
                                             android:textStyle="bold" />
                                     </LinearLayout>
-
-                                    <LinearLayout
-                                        android:id="@+id/linearEvadir"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:layout_margin="5dp"
-                                        android:layout_weight="1"
-                                        android:orientation="vertical">
-
-                                        <ImageView
-                                            android:layout_width="match_parent"
-                                            android:layout_height="match_parent"
-                                            android:layout_weight="1"
-                                            android:src="@drawable/evadir" />
-
-                                        <TextView
-                                            android:layout_width="match_parent"
-                                            android:layout_height="match_parent"
-                                            android:layout_weight="2"
-                                            android:fontFamily="@font/roboto"
-                                            android:gravity="center|top"
-                                            android:text="Evadir"
-                                            android:textColor="@color/colorBlack"
-                                            android:textSize="10sp"
-                                            android:textStyle="bold" />
-                                    </LinearLayout>
-
-                                    <LinearLayout
-                                        android:id="@+id/linearMediaPembelajaran"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:layout_margin="5dp"
-                                        android:layout_weight="1"
-                                        android:orientation="vertical">
-
-                                        <ImageView
-                                            android:layout_width="match_parent"
-                                            android:layout_height="match_parent"
-                                            android:layout_weight="1"
-                                            android:src="@drawable/media_pelajaran" />
-
-                                        <TextView
-                                            android:layout_width="match_parent"
-                                            android:layout_height="match_parent"
-                                            android:layout_weight="2"
-                                            android:fontFamily="@font/roboto"
-                                            android:gravity="center|top"
-                                            android:text="Media\nPembelajaran"
-                                            android:textColor="@color/colorBlack"
-                                            android:textSize="10sp"
-                                            android:textStyle="bold" />
-                                    </LinearLayout>
-
-                                    <LinearLayout
-                                        android:id="@+id/linearTugas"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:layout_margin="5dp"
-                                        android:layout_weight="1"
-                                        android:orientation="vertical">
-
-                                        <ImageView
-                                            android:layout_width="match_parent"
-                                            android:layout_height="match_parent"
-                                            android:layout_weight="1"
-                                            android:src="@drawable/tugas" />
-
-                                        <TextView
-                                            android:layout_width="match_parent"
-                                            android:layout_height="match_parent"
-                                            android:layout_weight="2"
-                                            android:fontFamily="@font/roboto"
-                                            android:gravity="center|top"
-                                            android:text="Tugas"
-                                            android:textColor="@color/colorBlack"
-                                            android:textSize="10sp"
-                                            android:textStyle="bold" />
-                                    </LinearLayout>
-
                                     <LinearLayout
                                         android:id="@+id/linearLihatSemua"
                                         android:layout_width="match_parent"
@@ -507,7 +504,7 @@
                                             android:layout_width="match_parent"
                                             android:layout_height="match_parent"
                                             android:layout_weight="1"
-                                            android:src="@drawable/lihat_semua_2" />
+                                            android:src="@drawable/lihat_semua" />
 
                                         <TextView
                                             android:layout_width="match_parent"

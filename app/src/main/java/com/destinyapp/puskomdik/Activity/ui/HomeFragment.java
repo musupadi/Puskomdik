@@ -48,7 +48,7 @@ public class HomeFragment extends Fragment {
 
     Switch SwitchMasuk;
     TextView CheckMasuk;
-    LinearLayout ProfilSekolah,AgendaSekolah,Prestasi,PPDB,StrukturSekolah,JadwalPelajaran,Evadir,MediaPembelajaran,Tugas,LihatSemua;
+    LinearLayout ProfilSekolah,AgendaSekolah,Eskul,Loker,KabarBerita,Prestasi,PPDB,StrukturSekolah,JadwalPelajaran,LihatSemua;
     LinearLayout DProfilSekolah,DAgendaSekolah,DPrestasi,DPPDB,DStrukturSekolah,DJadwalPelajaran,DEvadir,DMediaPembelajaran,DTugas,DGuru,DBiayaAkademik,DPembayaran,DROB;
     //Dialog
     Dialog dialog;
@@ -95,9 +95,9 @@ public class HomeFragment extends Fragment {
         PPDB = view.findViewById(R.id.linearPPDB);
         StrukturSekolah = view.findViewById(R.id.linearStrukturOrganisasi);
         JadwalPelajaran = view.findViewById(R.id.linearJadwalPelajaran);
-        Evadir = view.findViewById(R.id.linearEvadir);
-        MediaPembelajaran = view.findViewById(R.id.linearMediaPembelajaran);
-        Tugas = view.findViewById(R.id.linearTugas);
+        Eskul = view.findViewById(R.id.linearEskul);
+        Loker = view.findViewById(R.id.linearLoker);
+        KabarBerita = view.findViewById(R.id.linearLihatSemuaKabarBerita);
         LihatSemua = view.findViewById(R.id.linearLihatSemua);
         dialog = new Dialog(getActivity());
         dialog.setContentView(R.layout.dialog_menu_all);
@@ -217,13 +217,7 @@ public class HomeFragment extends Fragment {
         DPPDB = dialog.findViewById(R.id.linearPPDB);
         DStrukturSekolah = dialog.findViewById(R.id.linearStrukturOrganisasi);
         DJadwalPelajaran = dialog.findViewById(R.id.linearJadwalPelajaran);
-        DEvadir = dialog.findViewById(R.id.linearEvadir);
-        DMediaPembelajaran = dialog.findViewById(R.id.linearMediaPembelajaran);
-        DTugas = dialog.findViewById(R.id.linearTugas);
-        DGuru = dialog.findViewById(R.id.linearGuru);
         DBiayaAkademik = dialog.findViewById(R.id.linearBiayaAkademik);
-        DPembayaran = dialog.findViewById(R.id.linearPembayaran);
-        DROB = dialog.findViewById(R.id.linearROB);
     }
     private void ONCLICKDIALOG(){
         DProfilSekolah.setOnClickListener(new View.OnClickListener() {
@@ -266,60 +260,6 @@ public class HomeFragment extends Fragment {
                 getActivity().finish();
             }
         });
-        DJadwalPelajaran.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                destiny.ChangeActivity(getActivity(),"Jadwal Pelajaran");
-            }
-        });
-        DEvadir.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                destiny.ChangeActivity(getActivity(),"Evadir");
-            }
-        });
-        DMediaPembelajaran.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                destiny.ChangeActivity(getActivity(),"Media Pembelajaran");
-            }
-        });
-        DTugas.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                destiny.ChangeActivity(getActivity(),"Tugas");
-            }
-        });
-        DGuru.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                destiny.ChangeActivity(getActivity(),"Tugas");
-            }
-        });
-        DGuru.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                destiny.ChangeActivity(getActivity(),"Guru");
-            }
-        });
-        DBiayaAkademik.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                destiny.ChangeActivity(getActivity(),"Biaya Akademik");
-            }
-        });
-        DPembayaran.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                destiny.ChangeActivity(getActivity(),"Pembayaran");
-            }
-        });
-        DROB.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                destiny.ChangeActivity(getActivity(),"ROB");
-            }
-        });
     }
     private void ONCLICK(){
         ProfilSekolah.setOnClickListener(new View.OnClickListener() {
@@ -360,30 +300,6 @@ public class HomeFragment extends Fragment {
                 Intent intent = new Intent(getActivity(), StrukturOraganisasiActivity.class);
                 startActivity(intent);
                 getActivity().finish();
-            }
-        });
-        JadwalPelajaran.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                destiny.ChangeActivity(getActivity(),"Jadwal Pelajaran");
-            }
-        });
-        Evadir.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                destiny.ChangeActivity(getActivity(),"Evadir");
-            }
-        });
-        MediaPembelajaran.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                destiny.ChangeActivity(getActivity(),"Media Pembelajaran");
-            }
-        });
-        Tugas.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                destiny.ChangeActivity(getActivity(),"Tugas");
             }
         });
         LihatSemua.setOnClickListener(new View.OnClickListener() {
