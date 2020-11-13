@@ -25,21 +25,23 @@ import com.destinyapp.puskomdik.API.RetroServer;
 import com.destinyapp.puskomdik.Activity.Adapter.AdapterKabarBerita;
 import com.destinyapp.puskomdik.Activity.Adapter.AdapterKegiatan;
 import com.destinyapp.puskomdik.Activity.LoginActivity;
-import com.destinyapp.puskomdik.Activity.menu.AgendaSekolahActivity;
-import com.destinyapp.puskomdik.Activity.menu.EHadirActivity;
-import com.destinyapp.puskomdik.Activity.menu.EraportActivity;
-import com.destinyapp.puskomdik.Activity.menu.Finished.EskulActivity;
-import com.destinyapp.puskomdik.Activity.menu.JadwalPelajaranActivity;
-import com.destinyapp.puskomdik.Activity.menu.Finished.KabarSekolahActivity;
-import com.destinyapp.puskomdik.Activity.menu.KehadiranActivity;
-import com.destinyapp.puskomdik.Activity.menu.LokerActivity;
-import com.destinyapp.puskomdik.Activity.menu.Finished.PPDBActivity;
-import com.destinyapp.puskomdik.Activity.menu.Finished.PrestasiActivity;
-import com.destinyapp.puskomdik.Activity.menu.Finished.ProfilSekolahActivity;
-import com.destinyapp.puskomdik.Activity.menu.Finished.StrukturOraganisasiActivity;
-import com.destinyapp.puskomdik.Activity.menu.TemanActivity;
-import com.destinyapp.puskomdik.Activity.menu.TugasActivity;
-import com.destinyapp.puskomdik.Activity.menu.UjianActivity;
+import com.destinyapp.puskomdik.Activity.menu.Menu1.AgendaSekolahActivity;
+import com.destinyapp.puskomdik.Activity.menu.Menu1.EHadirActivity;
+import com.destinyapp.puskomdik.Activity.menu.Menu1.EraportActivity;
+import com.destinyapp.puskomdik.Activity.menu.Menu1.Finished.EskulActivity;
+import com.destinyapp.puskomdik.Activity.menu.Menu1.JadwalPelajaranActivity;
+import com.destinyapp.puskomdik.Activity.menu.Menu1.Finished.KabarSekolahActivity;
+import com.destinyapp.puskomdik.Activity.menu.Menu1.KehadiranActivity;
+import com.destinyapp.puskomdik.Activity.menu.Menu1.LokerActivity;
+import com.destinyapp.puskomdik.Activity.menu.Menu1.Finished.PPDBActivity;
+import com.destinyapp.puskomdik.Activity.menu.Menu1.Finished.PrestasiActivity;
+import com.destinyapp.puskomdik.Activity.menu.Menu1.Finished.ProfilSekolahActivity;
+import com.destinyapp.puskomdik.Activity.menu.Menu1.Finished.StrukturOraganisasiActivity;
+import com.destinyapp.puskomdik.Activity.menu.Menu1.TemanActivity;
+import com.destinyapp.puskomdik.Activity.menu.Menu1.TugasActivity;
+import com.destinyapp.puskomdik.Activity.menu.Menu1.UjianActivity;
+import com.destinyapp.puskomdik.Activity.menu.Menu2.GuruActivity;
+import com.destinyapp.puskomdik.Activity.menu.Menu2.PerpustakaanOnlineActivity;
 import com.destinyapp.puskomdik.Method.Destiny;
 import com.destinyapp.puskomdik.Model.DataModel;
 import com.destinyapp.puskomdik.Model.ResponseModel;
@@ -381,13 +383,17 @@ public class HomeFragment extends Fragment {
         DGuru.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(getActivity(), GuruActivity.class);
+                startActivity(intent);
+                getActivity().finish();
             }
         });
         DPerpustakaanOnline.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(getActivity(), PerpustakaanOnlineActivity.class);
+                startActivity(intent);
+                getActivity().finish();
             }
         });
         DVCon.setOnClickListener(new View.OnClickListener() {

@@ -1,4 +1,4 @@
-package com.destinyapp.puskomdik.Activity.menu.Finished;
+package com.destinyapp.puskomdik.Activity.menu.Menu1.Finished;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;

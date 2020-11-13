@@ -1,4 +1,4 @@
-package com.destinyapp.puskomdik.Activity.menu.Finished;
+package com.destinyapp.puskomdik.Activity.menu.Menu1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,25 +9,25 @@ import android.widget.RelativeLayout;
 import com.destinyapp.puskomdik.Method.Destiny;
 import com.destinyapp.puskomdik.R;
 
-public class ProfilSekolahActivity extends AppCompatActivity {
+public class AgendaSekolahActivity extends AppCompatActivity {
     Destiny destiny;
     RelativeLayout Back;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profil_sekolah);
+        setContentView(R.layout.activity_agenda_sekolah);
         destiny = new Destiny();
         Back = findViewById(R.id.relativeBack);
         Back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                destiny.Back(ProfilSekolahActivity.this);
+                destiny.Back(AgendaSekolahActivity.this);
             }
         });
     }
 
     @Override
     public void onBackPressed() {
-        destiny.Back(ProfilSekolahActivity.this);
+        destiny.Back(AgendaSekolahActivity.this);
     }
 }

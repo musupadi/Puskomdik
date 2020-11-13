@@ -1,7 +1,7 @@
-package com.destinyapp.puskomdik.Activity.menu.Finished;
+package com.destinyapp.puskomdik.Activity.menu.Menu1.Finished;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 import com.destinyapp.puskomdik.API.ApiRequest;
 import com.destinyapp.puskomdik.API.RetroServer;
-import com.destinyapp.puskomdik.Activity.Adapter.AdapterStrukturOrganisasi;
+import com.destinyapp.puskomdik.Activity.Adapter.AdapterEskul;
 import com.destinyapp.puskomdik.Activity.LoginActivity;
 import com.destinyapp.puskomdik.Method.Destiny;
 import com.destinyapp.puskomdik.Model.DataModel;
@@ -28,7 +28,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class StrukturOraganisasiActivity extends AppCompatActivity {
+public class EskulActivity extends AppCompatActivity {
     Destiny destiny;
     RelativeLayout Back;
     DB_Helper dbHelper;
@@ -40,10 +40,10 @@ public class StrukturOraganisasiActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_struktur_oraganisasi);
+        setContentView(R.layout.activity_eskul);
         destiny = new Destiny();
         Back = findViewById(R.id.relativeBack);
-        recycler = findViewById(R.id.recyclerView);
+        recycler = findViewById(R.id.recycler);
         dbHelper = new DB_Helper(this);
         Cursor cursor = dbHelper.checkUser();
         if (cursor.getCount()>0){
@@ -60,34 +60,34 @@ public class StrukturOraganisasiActivity extends AppCompatActivity {
         Back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                destiny.Back(StrukturOraganisasiActivity.this);
+                destiny.Back(EskulActivity.this);
             }
         });
     }
     private void Logic(){
-        mManager = new LinearLayoutManager(StrukturOraganisasiActivity.this, LinearLayoutManager.VERTICAL,false);
+        mManager = new GridLayoutManager(EskulActivity.this,2);
         recycler.setLayoutManager(mManager);
         ApiRequest api = RetroServer.getClient().create(ApiRequest.class);
-        Call<ResponseModel> KabarBerita = api.StrukturSekolah(destiny.AUTH(Token));
+        Call<ResponseModel> KabarBerita = api.EskulAll(destiny.AUTH(Token));
         KabarBerita.enqueue(new Callback<ResponseModel>() {
             @Override
             public void onResponse(Call<ResponseModel> call, Response<ResponseModel> response) {
                 try {
                     if (response.body().getStatusCode().equals("000")){
                         mItems=response.body().getData();
-                        mAdapter = new AdapterStrukturOrganisasi(StrukturOraganisasiActivity.this,mItems);
+                        mAdapter = new AdapterEskul(EskulActivity.this,mItems);
                         recycler.setAdapter(mAdapter);
                         mAdapter.notifyDataSetChanged();
                     }else if (response.body().getStatusCode().equals("001") || response.body().getStatusCode().equals("002")){
-                        destiny.AutoLogin(Username,Password, StrukturOraganisasiActivity.this);
+                        destiny.AutoLogin(Username,Password,EskulActivity.this);
                         Logic();
                     }else{
-                        Toast.makeText(StrukturOraganisasiActivity.this, "Terjadi Kesalahan ", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(EskulActivity.this, "Terjadi Kesalahan ", Toast.LENGTH_SHORT).show();
                     }
                 }catch (Exception e){
-                    Toast.makeText(StrukturOraganisasiActivity.this, "Terjadi Kesalahan User akan Terlogout", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(EskulActivity.this, "Terjadi Kesalahan User akan Terlogout", Toast.LENGTH_SHORT).show();
                     dbHelper.Logout();
-                    Intent intent = new Intent(StrukturOraganisasiActivity.this, LoginActivity.class);
+                    Intent intent = new Intent(EskulActivity.this, LoginActivity.class);
                     startActivity(intent);
                     finish();
                 }
@@ -95,13 +95,12 @@ public class StrukturOraganisasiActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<ResponseModel> call, Throwable t) {
-                Toast.makeText(StrukturOraganisasiActivity.this, "Koneksi Gagal", Toast.LENGTH_SHORT).show();
+                Toast.makeText(EskulActivity.this, "Koneksi Gagal", Toast.LENGTH_SHORT).show();
             }
         });
     }
-
     @Override
     public void onBackPressed() {
-        destiny.Back(StrukturOraganisasiActivity.this);
+        destiny.Back(EskulActivity.this);
     }
 }

@@ -1,4 +1,4 @@
-package com.destinyapp.puskomdik.Activity.menu;
+package com.destinyapp.puskomdik.Activity.menu.Menu1;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
@@ -16,7 +16,7 @@ import com.destinyapp.puskomdik.SharedPreferance.DB_Helper;
 import java.util.ArrayList;
 import java.util.List;
 
-public class EHadirActivity extends AppCompatActivity {
+public class EraportActivity extends AppCompatActivity {
     Destiny destiny;
     RelativeLayout Back;
     DB_Helper dbHelper;
@@ -28,7 +28,7 @@ public class EHadirActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_e_hadir);
+        setContentView(R.layout.activity_eraport);
         destiny = new Destiny();
         Back = findViewById(R.id.relativeBack);
         recycler = findViewById(R.id.recycler);
@@ -48,12 +48,12 @@ public class EHadirActivity extends AppCompatActivity {
         Back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                destiny.Back(EHadirActivity.this);
+                destiny.Back(EraportActivity.this);
             }
         });
     }
     @Override
     public void onBackPressed() {
-        destiny.Back(EHadirActivity.this);
+        destiny.Back(EraportActivity.this);
     }
 }

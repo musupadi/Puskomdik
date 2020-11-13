@@ -1,4 +1,4 @@
-package com.destinyapp.puskomdik.Activity.menu;
+package com.destinyapp.puskomdik.Activity.menu.Menu1;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
@@ -16,7 +16,7 @@ import com.destinyapp.puskomdik.SharedPreferance.DB_Helper;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TugasActivity extends AppCompatActivity {
+public class KehadiranActivity extends AppCompatActivity {
     Destiny destiny;
     RelativeLayout Back;
     DB_Helper dbHelper;
@@ -28,7 +28,7 @@ public class TugasActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tugas);
+        setContentView(R.layout.activity_kehadiran);
         destiny = new Destiny();
         Back = findViewById(R.id.relativeBack);
         recycler = findViewById(R.id.recycler);
@@ -48,12 +48,12 @@ public class TugasActivity extends AppCompatActivity {
         Back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                destiny.Back(TugasActivity.this);
+                destiny.Back(KehadiranActivity.this);
             }
         });
     }
     @Override
     public void onBackPressed() {
-        destiny.Back(TugasActivity.this);
+        destiny.Back(KehadiranActivity.this);
     }
 }

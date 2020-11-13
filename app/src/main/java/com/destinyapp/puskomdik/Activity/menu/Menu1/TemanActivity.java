@@ -1,4 +1,4 @@
-package com.destinyapp.puskomdik.Activity.menu;
+package com.destinyapp.puskomdik.Activity.menu.Menu1;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
@@ -16,7 +16,7 @@ import com.destinyapp.puskomdik.SharedPreferance.DB_Helper;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LokerActivity extends AppCompatActivity {
+public class TemanActivity extends AppCompatActivity {
     Destiny destiny;
     RelativeLayout Back;
     DB_Helper dbHelper;
@@ -28,7 +28,7 @@ public class LokerActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_loker);
+        setContentView(R.layout.activity_teman);
         destiny = new Destiny();
         Back = findViewById(R.id.relativeBack);
         recycler = findViewById(R.id.recycler);
@@ -48,12 +48,12 @@ public class LokerActivity extends AppCompatActivity {
         Back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                destiny.Back(LokerActivity.this);
+                destiny.Back(TemanActivity.this);
             }
         });
     }
     @Override
     public void onBackPressed() {
-        destiny.Back(LokerActivity.this);
+        destiny.Back(TemanActivity.this);
     }
 }

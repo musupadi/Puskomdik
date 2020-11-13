@@ -27,45 +27,64 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Puskomdik"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Activity.menu.EraportActivity"
-            android:theme="@style/AppThemeNoAction"></activity>
-        <activity android:name=".Activity.menu.UjianActivity"
-            android:theme="@style/AppThemeNoAction"/>
-        <activity android:name=".Activity.menu.TemanActivity"
-            android:theme="@style/AppThemeNoAction"/>
-        <activity android:name=".Activity.menu.TugasActivity"
-            android:theme="@style/AppThemeNoAction"/>
-        <activity android:name=".Activity.menu.EHadirActivity"
-            android:theme="@style/AppThemeNoAction"/>
+        <activity android:name=".Activity.menu.Menu2.KoperasiActivity"></activity>
+        <activity android:name=".Activity.menu.Menu2.BiayaAkademikActivity" />
+        <activity android:name=".Activity.menu.Menu2.RAKSActivity" />
+        <activity android:name=".Activity.menu.Menu2.EWalletActivity" />
+        <activity android:name=".Activity.menu.Menu2.PaymentActivity" />
+        <activity android:name=".Activity.menu.Menu2.GraduasiActivity" />
+        <activity android:name=".Activity.menu.Menu2.GalleryActivity" />
+        <activity android:name=".Activity.menu.Menu2.MarketplaceActivity" />
+        <activity android:name=".Activity.menu.Menu2.TeachingFactoryActivity" />
+        <activity android:name=".Activity.menu.Menu2.MediaPembelajaranActivity" />
+        <activity android:name=".Activity.menu.Menu2.TryOutActivity" />
+        <activity android:name=".Activity.menu.Menu2.VConActivity" />
+        <activity android:name=".Activity.menu.Menu2.PerpustakaanOnlineActivity" />
+        <activity android:name=".Activity.menu.Menu2.GuruActivity" />
         <activity
-            android:name=".Activity.menu.KehadiranActivity"
+            android:name=".Activity.menu.Menu1.EraportActivity"
             android:theme="@style/AppThemeNoAction" />
         <activity
-            android:name=".Activity.menu.JadwalPelajaranActivity"
+            android:name=".Activity.menu.Menu1.UjianActivity"
             android:theme="@style/AppThemeNoAction" />
         <activity
-            android:name=".Activity.menu.LokerActivity"
+            android:name=".Activity.menu.Menu1.TemanActivity"
             android:theme="@style/AppThemeNoAction" />
         <activity
-            android:name=".Activity.menu.Finished.KabarSekolahActivity"
+            android:name=".Activity.menu.Menu1.TugasActivity"
             android:theme="@style/AppThemeNoAction" />
         <activity
-            android:name=".Activity.menu.Finished.EskulActivity"
+            android:name=".Activity.menu.Menu1.EHadirActivity"
             android:theme="@style/AppThemeNoAction" />
         <activity
-            android:name=".Activity.menu.Finished.PPDBActivity"
+            android:name=".Activity.menu.Menu1.KehadiranActivity"
             android:theme="@style/AppThemeNoAction" />
         <activity
-            android:name=".Activity.menu.AgendaSekolahActivity"
+            android:name=".Activity.menu.Menu1.JadwalPelajaranActivity"
             android:theme="@style/AppThemeNoAction" />
         <activity
-            android:name=".Activity.menu.Finished.ProfilSekolahActivity"
+            android:name=".Activity.menu.Menu1.LokerActivity"
             android:theme="@style/AppThemeNoAction" />
         <activity
-            android:name=".Activity.menu.Finished.PrestasiActivity"
+            android:name=".Activity.menu.Menu1.Finished.KabarSekolahActivity"
             android:theme="@style/AppThemeNoAction" />
         <activity
-            android:name=".Activity.menu.Finished.StrukturOraganisasiActivity"
+            android:name=".Activity.menu.Menu1.Finished.EskulActivity"
+            android:theme="@style/AppThemeNoAction" />
+        <activity
+            android:name=".Activity.menu.Menu1.Finished.PPDBActivity"
+            android:theme="@style/AppThemeNoAction" />
+        <activity
+            android:name=".Activity.menu.Menu1.AgendaSekolahActivity"
+            android:theme="@style/AppThemeNoAction" />
+        <activity
+            android:name=".Activity.menu.Menu1.Finished.ProfilSekolahActivity"
+            android:theme="@style/AppThemeNoAction" />
+        <activity
+            android:name=".Activity.menu.Menu1.Finished.PrestasiActivity"
+            android:theme="@style/AppThemeNoAction" />
+        <activity
+            android:name=".Activity.menu.Menu1.Finished.StrukturOraganisasiActivity"
             android:theme="@style/AppThemeNoAction" />
         <activity
             android:name=".Activity.LoginActivity"
