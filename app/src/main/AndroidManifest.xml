@@ -27,22 +27,45 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Puskomdik"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Activity.menu.EskulActivity"
+        <activity android:name=".Activity.menu.EraportActivity"
             android:theme="@style/AppThemeNoAction"></activity>
+        <activity android:name=".Activity.menu.UjianActivity"
+            android:theme="@style/AppThemeNoAction"/>
+        <activity android:name=".Activity.menu.TemanActivity"
+            android:theme="@style/AppThemeNoAction"/>
+        <activity android:name=".Activity.menu.TugasActivity"
+            android:theme="@style/AppThemeNoAction"/>
+        <activity android:name=".Activity.menu.EHadirActivity"
+            android:theme="@style/AppThemeNoAction"/>
         <activity
-            android:name=".Activity.menu.PPDBActivity"
+            android:name=".Activity.menu.KehadiranActivity"
+            android:theme="@style/AppThemeNoAction" />
+        <activity
+            android:name=".Activity.menu.JadwalPelajaranActivity"
+            android:theme="@style/AppThemeNoAction" />
+        <activity
+            android:name=".Activity.menu.LokerActivity"
+            android:theme="@style/AppThemeNoAction" />
+        <activity
+            android:name=".Activity.menu.Finished.KabarSekolahActivity"
+            android:theme="@style/AppThemeNoAction" />
+        <activity
+            android:name=".Activity.menu.Finished.EskulActivity"
+            android:theme="@style/AppThemeNoAction" />
+        <activity
+            android:name=".Activity.menu.Finished.PPDBActivity"
             android:theme="@style/AppThemeNoAction" />
         <activity
             android:name=".Activity.menu.AgendaSekolahActivity"
             android:theme="@style/AppThemeNoAction" />
         <activity
-            android:name=".Activity.menu.ProfilSekolahActivity"
+            android:name=".Activity.menu.Finished.ProfilSekolahActivity"
             android:theme="@style/AppThemeNoAction" />
         <activity
-            android:name=".Activity.menu.PrestasiActivity"
+            android:name=".Activity.menu.Finished.PrestasiActivity"
             android:theme="@style/AppThemeNoAction" />
         <activity
-            android:name=".Activity.menu.StrukturOraganisasiActivity"
+            android:name=".Activity.menu.Finished.StrukturOraganisasiActivity"
             android:theme="@style/AppThemeNoAction" />
         <activity
             android:name=".Activity.LoginActivity"

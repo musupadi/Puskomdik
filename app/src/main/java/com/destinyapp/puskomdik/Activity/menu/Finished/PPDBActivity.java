@@ -1,4 +1,4 @@
-package com.destinyapp.puskomdik.Activity.menu;
+package com.destinyapp.puskomdik.Activity.menu.Finished;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
