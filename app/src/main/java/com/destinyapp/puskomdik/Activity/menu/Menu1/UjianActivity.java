@@ -52,4 +52,9 @@ public class UjianActivity extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public void onBackPressed() {
+        destiny.Back(UjianActivity.this);
+    }
 }

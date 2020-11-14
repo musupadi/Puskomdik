@@ -17,6 +17,11 @@ public interface ApiRequest {
     Call<ResponseModel> login(@Field("username") String username,
                               @Field("password") String password);
 
+    @FormUrlEncoded
+    @POST("apply_ekskul")
+    Call<ResponseModel> ApplyEskul(@Header("Authorization") String authHeader,
+            @Field("idEkskul[]") String idEskul);
+
     //GET
     @GET("kabarsekolah")
     Call<ResponseModel> KabarSekolah(@Header("Authorization") String authHeader);

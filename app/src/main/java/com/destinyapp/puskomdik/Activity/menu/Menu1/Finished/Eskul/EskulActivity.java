@@ -1,4 +1,4 @@
-package com.destinyapp.puskomdik.Activity.menu.Menu1.Finished;
+package com.destinyapp.puskomdik.Activity.menu.Menu1.Finished.Eskul;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;

@@ -28,9 +28,9 @@ import com.destinyapp.puskomdik.Activity.LoginActivity;
 import com.destinyapp.puskomdik.Activity.menu.Menu1.AgendaSekolahActivity;
 import com.destinyapp.puskomdik.Activity.menu.Menu1.EHadirActivity;
 import com.destinyapp.puskomdik.Activity.menu.Menu1.EraportActivity;
-import com.destinyapp.puskomdik.Activity.menu.Menu1.Finished.EskulActivity;
+import com.destinyapp.puskomdik.Activity.menu.Menu1.Finished.Eskul.EskulActivity;
 import com.destinyapp.puskomdik.Activity.menu.Menu1.JadwalPelajaranActivity;
-import com.destinyapp.puskomdik.Activity.menu.Menu1.Finished.KabarSekolahActivity;
+import com.destinyapp.puskomdik.Activity.menu.Menu1.Finished.KabarSekolah.KabarSekolahActivity;
 import com.destinyapp.puskomdik.Activity.menu.Menu1.KehadiranActivity;
 import com.destinyapp.puskomdik.Activity.menu.Menu1.LokerActivity;
 import com.destinyapp.puskomdik.Activity.menu.Menu1.Finished.PPDBActivity;
@@ -40,8 +40,18 @@ import com.destinyapp.puskomdik.Activity.menu.Menu1.Finished.StrukturOraganisasi
 import com.destinyapp.puskomdik.Activity.menu.Menu1.TemanActivity;
 import com.destinyapp.puskomdik.Activity.menu.Menu1.TugasActivity;
 import com.destinyapp.puskomdik.Activity.menu.Menu1.UjianActivity;
+import com.destinyapp.puskomdik.Activity.menu.Menu2.BiayaAkademikActivity;
+import com.destinyapp.puskomdik.Activity.menu.Menu2.EWalletActivity;
+import com.destinyapp.puskomdik.Activity.menu.Menu2.GalleryActivity;
+import com.destinyapp.puskomdik.Activity.menu.Menu2.GraduasiActivity;
 import com.destinyapp.puskomdik.Activity.menu.Menu2.GuruActivity;
+import com.destinyapp.puskomdik.Activity.menu.Menu2.KoperasiActivity;
+import com.destinyapp.puskomdik.Activity.menu.Menu2.MarketplaceActivity;
+import com.destinyapp.puskomdik.Activity.menu.Menu2.PaymentActivity;
 import com.destinyapp.puskomdik.Activity.menu.Menu2.PerpustakaanOnlineActivity;
+import com.destinyapp.puskomdik.Activity.menu.Menu2.RAKSActivity;
+import com.destinyapp.puskomdik.Activity.menu.Menu2.TryOutActivity;
+import com.destinyapp.puskomdik.Activity.menu.Menu2.VConActivity;
 import com.destinyapp.puskomdik.Method.Destiny;
 import com.destinyapp.puskomdik.Model.DataModel;
 import com.destinyapp.puskomdik.Model.ResponseModel;
@@ -60,7 +70,7 @@ public class HomeFragment extends Fragment {
 
     Switch SwitchMasuk;
     TextView CheckMasuk;
-    LinearLayout ProfilSekolah,AgendaSekolah,Eskul,Loker,KabarBerita,Prestasi,PPDB,StrukturSekolah,JadwalPelajaran,LihatSemua;
+    LinearLayout ProfilSekolah,AgendaSekolah,Eskul,Loker,KabarSekolah,KabarBerita,Prestasi,PPDB,StrukturSekolah,JadwalPelajaran,LihatSemua;
     //DIALOG 1
     LinearLayout DProfilSekolah,DAgendaSekolah,DEskul,DLoker,DKabarBerita,DPrestasi,DPPDB,DStrukturSekolah,DJadwalPelajaran,DKehadiran,DEHadir,DTugas,DTeman,DUjian,DEraport;
     //DIALOG 2
@@ -112,6 +122,7 @@ public class HomeFragment extends Fragment {
         JadwalPelajaran = view.findViewById(R.id.linearJadwalPelajaran);
         Eskul = view.findViewById(R.id.linearEskul);
         Loker = view.findViewById(R.id.linearLoker);
+        KabarSekolah = view.findViewById(R.id.linearKabarSekolah);
         KabarBerita = view.findViewById(R.id.linearLihatSemuaKabarBerita);
         LihatSemua = view.findViewById(R.id.linearLihatSemua);
         dialog = new Dialog(getActivity());
@@ -399,13 +410,17 @@ public class HomeFragment extends Fragment {
         DVCon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(getActivity(), VConActivity.class);
+                startActivity(intent);
+                getActivity().finish();
             }
         });
         DTryOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(getActivity(), TryOutActivity.class);
+                startActivity(intent);
+                getActivity().finish();
             }
         });
         DTeachingFactory.setOnClickListener(new View.OnClickListener() {
@@ -417,49 +432,65 @@ public class HomeFragment extends Fragment {
         DMarketplace.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(getActivity(), MarketplaceActivity.class);
+                startActivity(intent);
+                getActivity().finish();
             }
         });
         DGalleri.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(getActivity(), GalleryActivity.class);
+                startActivity(intent);
+                getActivity().finish();
             }
         });
         DGraduasi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(getActivity(), GraduasiActivity.class);
+                startActivity(intent);
+                getActivity().finish();
             }
         });
         DPayment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(getActivity(), PaymentActivity.class);
+                startActivity(intent);
+                getActivity().finish();
             }
         });
         DEwallet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(getActivity(), EWalletActivity.class);
+                startActivity(intent);
+                getActivity().finish();
             }
         });
         DRAKS.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(getActivity(), RAKSActivity.class);
+                startActivity(intent);
+                getActivity().finish();
             }
         });
         DBiayaAkademik.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(getActivity(), BiayaAkademikActivity.class);
+                startActivity(intent);
+                getActivity().finish();
             }
         });
         DKoperasi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(getActivity(), KoperasiActivity.class);
+                startActivity(intent);
+                getActivity().finish();
             }
         });
     }
@@ -492,6 +523,14 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), LokerActivity.class);
+                startActivity(intent);
+                getActivity().finish();
+            }
+        });
+        KabarSekolah.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), KabarSekolahActivity.class);
                 startActivity(intent);
                 getActivity().finish();
             }
