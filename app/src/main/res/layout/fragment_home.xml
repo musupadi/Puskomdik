@@ -164,7 +164,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:fontFamily="@font/roboto"
-                                        android:text="TK Besar"
+                                        android:text="SMK PUTRA PENA"
                                         android:textColor="@color/colorBlack"
                                         android:textStyle="bold" />
 
@@ -173,7 +173,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:fontFamily="@font/roboto"
-                                        android:text="TK Bina Siswi"
+                                        android:text="SMK PUTRA PENA"
                                         android:textSize="@dimen/text_xtra_large"
                                         android:textStyle="bold" />
                                 </LinearLayout>
