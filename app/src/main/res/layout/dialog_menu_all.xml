@@ -35,12 +35,18 @@
                             android:layout_margin="5dp"
                             android:layout_weight="1"
                             android:orientation="vertical">
-
-                            <ImageView
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:src="@drawable/profil_sekolah" />
+                                android:background="@drawable/round_secondary">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="10dp"
+                                    android:src="@drawable/profil_sekolah" />
+                            </LinearLayout>
+
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -60,12 +66,18 @@
                             android:layout_margin="5dp"
                             android:layout_weight="1"
                             android:orientation="vertical">
-
-                            <ImageView
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:src="@drawable/agenda_sekolah" />
+                                android:background="@drawable/round_secondary">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="10dp"
+                                    android:src="@drawable/agenda_sekolah" />
+                            </LinearLayout>
+
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -85,12 +97,17 @@
                             android:layout_margin="5dp"
                             android:layout_weight="1"
                             android:orientation="vertical">
-
-                            <ImageView
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:src="@drawable/eskul" />
+                                android:background="@drawable/round_secondary">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="10dp"
+                                    android:src="@drawable/eskul" />
+                            </LinearLayout>
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -110,12 +127,18 @@
                             android:layout_margin="5dp"
                             android:layout_weight="1"
                             android:orientation="vertical">
-
-                            <ImageView
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:src="@drawable/loker" />
+                                android:background="@drawable/round_secondary">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="10dp"
+                                    android:src="@drawable/loker" />
+                            </LinearLayout>
+
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -135,12 +158,18 @@
                             android:layout_margin="5dp"
                             android:layout_weight="1"
                             android:orientation="vertical">
-
-                            <ImageView
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:src="@drawable/kabar_sekolah" />
+                                android:background="@drawable/round_secondary">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="10dp"
+                                    android:src="@drawable/kabar_sekolah" />
+                            </LinearLayout>
+
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -166,13 +195,17 @@
                             android:layout_margin="5dp"
                             android:layout_weight="1"
                             android:orientation="vertical">
-
-                            <ImageView
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:src="@drawable/prestasi" />
-
+                                android:background="@drawable/round_secondary">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="10dp"
+                                    android:src="@drawable/prestasi" />
+                            </LinearLayout>
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
@@ -191,12 +224,18 @@
                             android:layout_margin="5dp"
                             android:layout_weight="1"
                             android:orientation="vertical">
-
-                            <ImageView
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:src="@drawable/ppdb" />
+                                android:background="@drawable/round_secondary">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="10dp"
+                                    android:src="@drawable/ppdb" />
+                            </LinearLayout>
+
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -216,13 +255,17 @@
                             android:layout_margin="5dp"
                             android:layout_weight="1"
                             android:orientation="vertical">
-
-                            <ImageView
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:src="@drawable/struktur_organisasi" />
-
+                                android:background="@drawable/round_secondary">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="10dp"
+                                    android:src="@drawable/struktur_organisasi" />
+                            </LinearLayout>
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
@@ -241,12 +284,18 @@
                             android:layout_margin="5dp"
                             android:layout_weight="1"
                             android:orientation="vertical">
-
-                            <ImageView
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:src="@drawable/jadwal_pelajaran" />
+                                android:background="@drawable/round_secondary">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="10dp"
+                                    android:src="@drawable/jadwal_pelajaran" />
+                            </LinearLayout>
+
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -266,12 +315,18 @@
                             android:layout_margin="5dp"
                             android:layout_weight="1"
                             android:orientation="vertical">
-
-                            <ImageView
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:src="@drawable/kehadiran" />
+                                android:background="@drawable/round_secondary">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="10dp"
+                                    android:src="@drawable/kehadiran" />
+                            </LinearLayout>
+
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -297,11 +352,18 @@
                             android:orientation="vertical"
                             android:id="@+id/linearEhadir"
                             android:layout_margin="5dp">
-                            <ImageView
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:src="@drawable/e_hadir"/>
+                                android:background="@drawable/round_secondary">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="10dp"
+                                    android:src="@drawable/e_hadir"/>
+                            </LinearLayout>
+
                             <TextView
                                 android:fontFamily="@font/roboto"
                                 android:textStyle="bold"
@@ -320,11 +382,18 @@
                             android:orientation="vertical"
                             android:id="@+id/linearTugas"
                             android:layout_margin="5dp">
-                            <ImageView
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:src="@drawable/tugas"/>
+                                android:background="@drawable/round_secondary">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="10dp"
+                                    android:src="@drawable/tugas"/>
+                            </LinearLayout>
+
                             <TextView
                                 android:textSize="@dimen/text_smoll"
                                 android:fontFamily="@font/roboto"
@@ -343,11 +412,18 @@
                             android:orientation="vertical"
                             android:id="@+id/linearTeman"
                             android:layout_margin="5dp">
-                            <ImageView
-                                android:src="@drawable/teman"
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:layout_weight="1"/>
+                                android:layout_weight="1"
+                                android:background="@drawable/round_secondary">
+                                <ImageView
+                                    android:src="@drawable/teman"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="10dp"/>
+                            </LinearLayout>
+
                             <TextView
                                 android:fontFamily="@font/roboto"
                                 android:textStyle="bold"
@@ -366,11 +442,18 @@
                             android:orientation="vertical"
                             android:id="@+id/linearUjian"
                             android:layout_margin="5dp">
-                            <ImageView
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:src="@drawable/ujian"/>
+                                android:background="@drawable/round_secondary">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="10dp"
+                                    android:src="@drawable/ujian"/>
+                            </LinearLayout>
+
                             <TextView
                                 android:fontFamily="@font/roboto"
                                 android:textStyle="bold"
@@ -389,11 +472,18 @@
                             android:orientation="vertical"
                             android:id="@+id/linearERaport"
                             android:layout_margin="5dp">
-                            <ImageView
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:src="@drawable/e_raport"/>
+                                android:background="@drawable/round_secondary">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="10dp"
+                                    android:src="@drawable/e_raport"/>
+                            </LinearLayout>
+
                             <TextView
                                 android:fontFamily="@font/roboto"
                                 android:textStyle="bold"
@@ -423,11 +513,18 @@
                             android:orientation="vertical"
                             android:id="@+id/linearGuru"
                             android:layout_margin="5dp">
-                            <ImageView
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:src="@drawable/guru"/>
+                                android:background="@drawable/round_secondary">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="10dp"
+                                    android:src="@drawable/guru"/>
+                            </LinearLayout>
+
                             <TextView
                                 android:fontFamily="@font/roboto"
                                 android:textStyle="bold"
@@ -446,11 +543,18 @@
                             android:orientation="vertical"
                             android:id="@+id/linearPerpustakaanOnline"
                             android:layout_margin="5dp">
-                            <ImageView
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:src="@drawable/perpustakaan_online"/>
+                                android:background="@drawable/round_secondary">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="10dp"
+                                    android:src="@drawable/perpustakaan_online"/>
+                            </LinearLayout>
+
                             <TextView
                                 android:fontFamily="@font/roboto"
                                 android:textStyle="bold"
@@ -469,11 +573,18 @@
                             android:orientation="vertical"
                             android:layout_margin="5dp"
                             android:id="@+id/linearVCon">
-                            <ImageView
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:src="@drawable/vcon"/>
+                                android:background="@drawable/round_secondary">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="10dp"
+                                    android:src="@drawable/vcon"/>
+                            </LinearLayout>
+
                             <TextView
                                 android:fontFamily="@font/roboto"
                                 android:textStyle="bold"
@@ -492,11 +603,18 @@
                             android:orientation="vertical"
                             android:layout_margin="5dp"
                             android:id="@+id/linearTryOut">
-                            <ImageView
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:src="@drawable/try_out"/>
+                                android:background="@drawable/round_secondary">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="10dp"
+                                    android:src="@drawable/try_out"/>
+                            </LinearLayout>
+
 
                             <TextView
                                 android:layout_width="match_parent"
@@ -516,11 +634,18 @@
                             android:orientation="vertical"
                             android:layout_margin="5dp"
                             android:id="@+id/linearMediaPembelajaran">
-                            <ImageView
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:src="@drawable/media_pembelajaran"/>
+                                android:background="@drawable/round_secondary">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="10dp"
+                                    android:src="@drawable/media_pembelajaran"/>
+                            </LinearLayout>
+
                             <TextView
                                 android:fontFamily="@font/roboto"
                                 android:textStyle="bold"
@@ -545,11 +670,18 @@
                             android:orientation="vertical"
                             android:layout_margin="5dp"
                             android:id="@+id/linearTeachingFactory">
-                            <ImageView
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:src="@drawable/teaching_factory"/>
+                                android:background="@drawable/round_secondary">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="10dp"
+                                    android:src="@drawable/teaching_factory"/>
+                            </LinearLayout>
+
                             <TextView
                                 android:fontFamily="@font/roboto"
                                 android:textStyle="bold"
@@ -568,11 +700,18 @@
                             android:orientation="vertical"
                             android:layout_margin="5dp"
                             android:id="@+id/linearMarketplace">
-                            <ImageView
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:src="@drawable/marketplace"/>
+                                android:background="@drawable/round_secondary">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="10dp"
+                                    android:src="@drawable/marketplace"/>
+                            </LinearLayout>
+
                             <TextView
                                 android:textSize="@dimen/text_smoll"
                                 android:fontFamily="@font/roboto"
@@ -591,11 +730,18 @@
                             android:orientation="vertical"
                             android:layout_margin="5dp"
                             android:id="@+id/linearGalleri">
-                            <ImageView
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:src="@drawable/galleri"/>
+                                android:background="@drawable/round_secondary">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="10dp"
+                                    android:src="@drawable/galleri"/>
+                            </LinearLayout>
+
                             <TextView
                                 android:fontFamily="@font/roboto"
                                 android:textStyle="bold"
@@ -614,11 +760,18 @@
                             android:orientation="vertical"
                             android:layout_margin="5dp"
                             android:id="@+id/linearGraduasi">
-                            <ImageView
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:src="@drawable/graduasi"/>
+                                android:background="@drawable/round_secondary">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="10dp"
+                                    android:src="@drawable/graduasi"/>
+                            </LinearLayout>
+
                             <TextView
                                 android:fontFamily="@font/roboto"
                                 android:textStyle="bold"
@@ -637,11 +790,17 @@
                             android:orientation="vertical"
                             android:layout_margin="5dp"
                             android:id="@+id/linearPayment">
-                            <ImageView
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:src="@drawable/payment"/>
+                                android:background="@drawable/round_secondary">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="10dp"
+                                    android:src="@drawable/payment"/>
+                            </LinearLayout>
                             <TextView
                                 android:fontFamily="@font/roboto"
                                 android:textStyle="bold"
@@ -666,11 +825,18 @@
                             android:orientation="vertical"
                             android:layout_margin="5dp"
                             android:id="@+id/linearEWallet">
-                            <ImageView
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:src="@drawable/e_wallet"/>
+                                android:background="@drawable/round_secondary">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="10dp"
+                                    android:src="@drawable/e_wallet"/>
+                            </LinearLayout>
+
                             <TextView
                                 android:fontFamily="@font/roboto"
                                 android:textStyle="bold"
@@ -689,11 +855,18 @@
                             android:orientation="vertical"
                             android:layout_margin="5dp"
                             android:id="@+id/linearRaks">
-                            <ImageView
-                                android:src="@drawable/raks"
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:layout_weight="1"/>
+                                android:layout_weight="1"
+                                android:background="@drawable/round_secondary">
+                                <ImageView
+                                    android:src="@drawable/raks"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="10dp"/>
+                            </LinearLayout>
+
                             <TextView
                                 android:textSize="@dimen/text_smoll"
                                 android:fontFamily="@font/roboto"
@@ -712,11 +885,18 @@
                             android:orientation="vertical"
                             android:layout_margin="5dp"
                             android:id="@+id/linearBiayaAkademik">
-                            <ImageView
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:src="@drawable/biaya_akademik"/>
+                                android:background="@drawable/round_secondary">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="10dp"
+                                    android:src="@drawable/biaya_akademik"/>
+                            </LinearLayout>
+
                             <TextView
                                 android:fontFamily="@font/roboto"
                                 android:textStyle="bold"
@@ -735,11 +915,17 @@
                             android:orientation="vertical"
                             android:layout_margin="5dp"
                             android:id="@+id/linearKoperasi">
-                            <ImageView
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:src="@drawable/koperasi"/>
+                                android:background="@drawable/round_secondary">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="10dp"
+                                    android:src="@drawable/koperasi"/>
+                            </LinearLayout>
                             <TextView
                                 android:fontFamily="@font/roboto"
                                 android:textStyle="bold"

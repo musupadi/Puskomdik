@@ -97,7 +97,7 @@ public class Destiny {
         });
     }
     public String BASE_URL(){
-        String BASE_URL = "http://kitabelajar.mitradanacepat.com/";
+        String BASE_URL = "http://devpuskomdik.mitradanacepat.com/";
         return BASE_URL;
     }
     public String AUTH(String auth){
@@ -250,6 +250,17 @@ public class Destiny {
         result = day+"-"+MONTH+"-"+year;
         return result;
 
+    }
+    public static String getThisDayDB(){
+        DateFormat dateFormat1 = new SimpleDateFormat("dd");
+        DateFormat dateFormat2 = new SimpleDateFormat("MM");
+        DateFormat dateFormat3 = new SimpleDateFormat("yyyy");
+        Date date = new Date();
+        String Day = dateFormat1.format(date);
+        String month = dateFormat2.format(date);
+        String Year = dateFormat3.format(date);
+        String dates = Year+"-"+month+"-"+Day;
+        return dates;
     }
     public static String thisDay(){
         DateFormat dateFormat1 = new SimpleDateFormat("dd");

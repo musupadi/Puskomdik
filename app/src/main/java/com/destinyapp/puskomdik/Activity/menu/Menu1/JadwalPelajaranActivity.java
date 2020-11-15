@@ -1,37 +1,58 @@
 package com.destinyapp.puskomdik.Activity.menu.Menu1;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.DatePicker;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
+import android.widget.Toast;
 
+import com.destinyapp.puskomdik.API.ApiRequest;
+import com.destinyapp.puskomdik.API.RetroServer;
+import com.destinyapp.puskomdik.Activity.Adapter.AdapterJadwalPelajaran;
+import com.destinyapp.puskomdik.Activity.Adapter.AdapterPrestasi;
+import com.destinyapp.puskomdik.Activity.LoginActivity;
+import com.destinyapp.puskomdik.Activity.menu.Menu1.Finished.PrestasiActivity;
 import com.destinyapp.puskomdik.Method.Destiny;
 import com.destinyapp.puskomdik.Model.DataModel;
+import com.destinyapp.puskomdik.Model.ResponseModel;
 import com.destinyapp.puskomdik.R;
 import com.destinyapp.puskomdik.SharedPreferance.DB_Helper;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
-public class JadwalPelajaranActivity extends AppCompatActivity {
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
+public class JadwalPelajaranActivity extends AppCompatActivity implements DatePickerDialog.OnDateSetListener{
     Destiny destiny;
     RelativeLayout Back;
+    LinearLayout linearTanggal;
+    TextView tvTanggal;
     DB_Helper dbHelper;
     String Username,Password,Nama,Token,Level,Photo;
     RecyclerView recycler;
     private List<DataModel> mItems = new ArrayList<>();
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mManager;
+    String DATES;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jadwal_pelajaran);
         destiny = new Destiny();
-        Back = findViewById(R.id.relativeBack);
-        recycler = findViewById(R.id.recycler);
+        DECLARATION();
         dbHelper = new DB_Helper(this);
         Cursor cursor = dbHelper.checkUser();
         if (cursor.getCount()>0){
@@ -44,7 +65,16 @@ public class JadwalPelajaranActivity extends AppCompatActivity {
                 Photo = cursor.getString(5);
             }
         }
-//        Logic();
+        Logic();
+        ONCLICK();
+    }
+    private void ONCLICK(){
+        linearTanggal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showDatePicker();
+            }
+        });
         Back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -52,8 +82,72 @@ public class JadwalPelajaranActivity extends AppCompatActivity {
             }
         });
     }
+    private void DECLARATION(){
+        Back = findViewById(R.id.relativeBack);
+        recycler = findViewById(R.id.recycler);
+        linearTanggal = findViewById(R.id.linearTanggal);
+        tvTanggal = findViewById(R.id.tvTanggal);
+        tvTanggal.setText(destiny.thisDay());
+        DATES = destiny.getThisDayDB();
+        Toast.makeText(this, DATES, Toast.LENGTH_SHORT).show();
+    }
+    private void Logic(){
+        mManager = new LinearLayoutManager(JadwalPelajaranActivity.this, LinearLayoutManager.VERTICAL,false);
+        recycler.setLayoutManager(mManager);
+        ApiRequest api = RetroServer.getClient().create(ApiRequest.class);
+        Call<ResponseModel> KabarBerita = api.GetMapel(destiny.AUTH(Token),DATES);
+        KabarBerita.enqueue(new Callback<ResponseModel>() {
+            @Override
+            public void onResponse(Call<ResponseModel> call, Response<ResponseModel> response) {
+                try {
+                    if (response.body().getStatusCode().equals("000")){
+                        mItems=response.body().getData();
+                        mAdapter = new AdapterJadwalPelajaran(JadwalPelajaranActivity.this,mItems);
+                        recycler.setAdapter(mAdapter);
+                        mAdapter.notifyDataSetChanged();
+                    }else if (response.body().getStatusCode().equals("001") || response.body().getStatusCode().equals("002")){
+                        destiny.AutoLogin(Username,Password,JadwalPelajaranActivity.this);
+                        Logic();
+                    }else{
+                        Toast.makeText(JadwalPelajaranActivity.this, "Terjadi Kesalahan ", Toast.LENGTH_SHORT).show();
+                    }
+                }catch (Exception e){
+                    Toast.makeText(JadwalPelajaranActivity.this, "Terjadi Kesalahan User akan Terlogout", Toast.LENGTH_SHORT).show();
+                    dbHelper.Logout();
+                    Intent intent = new Intent(JadwalPelajaranActivity.this, LoginActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponseModel> call, Throwable t) {
+                Toast.makeText(JadwalPelajaranActivity.this, "Koneksi Gagal", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
     @Override
     public void onBackPressed() {
         destiny.Back(JadwalPelajaranActivity.this);
+    }
+
+    private void showDatePicker(){
+        DatePickerDialog dialog = new DatePickerDialog(JadwalPelajaranActivity.this,
+                this,
+                Calendar.getInstance().get(Calendar.YEAR),
+                Calendar.getInstance().get(Calendar.MONTH),
+                Calendar.getInstance().get(Calendar.DAY_OF_MONTH));
+        dialog.show();
+    }
+
+    @Override
+    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+        int Month = month+1;
+        String date = year+"-"+Month+"-"+dayOfMonth;
+        DATES = date;
+        tvTanggal.setText(destiny.DateChanges(String.valueOf(year), String.valueOf(Month), String.valueOf(dayOfMonth)));
+        Toast.makeText(this, date, Toast.LENGTH_SHORT).show();
+        Logic();
     }
 }

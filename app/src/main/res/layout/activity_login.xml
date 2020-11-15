@@ -62,7 +62,7 @@
             android:layout_marginLeft="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:theme="@style/AppThemeNoAction"
+            android:theme="@style/AppThemeLogins"
             android:focusable="true"
             android:focusableInTouchMode="true"
             android:textColorHint="@color/colorWhite"
@@ -93,7 +93,7 @@
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:paddingTop="5dp"
-            android:theme="@style/AppThemeNoAction"
+            android:theme="@style/AppThemeLogins"
             android:paddingBottom="5dp">
             <EditText
                 android:id="@+id/etPassword"

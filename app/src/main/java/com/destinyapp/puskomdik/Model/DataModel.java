@@ -139,6 +139,85 @@ public class DataModel {
     @SerializedName("link_foto")
     @Expose
     public String link_foto;
+
+    //Jadwal Mata Pelajaran
+    @SerializedName("id_mapel_kelas_jadwal")
+    @Expose
+    public String id_mapel_kelas_jadwal;
+
+    @SerializedName("id_mapel_kelas")
+    @Expose
+    public String id_mapel_kelas;
+
+    @SerializedName("id_mapel")
+    @Expose
+    public String id_mapel;
+
+    @SerializedName("id_guru")
+    @Expose
+    public String id_guru;
+
+    @SerializedName("jam_mulai")
+    @Expose
+    public String jam_mulai;
+
+    @SerializedName("jam_selesai")
+    @Expose
+    public String jam_selesai;
+
+    @SerializedName("id_kelas")
+    @Expose
+    public String id_kelas;
+
+    @SerializedName("tgl_kelas")
+    @Expose
+    public String tgl_kelas;
+
+    @SerializedName("nama_hari")
+    @Expose
+    public String nama_hari;
+
+    @SerializedName("tgl_tambah_mapel_kelas")
+    @Expose
+    public String tgl_tambah_mapel_kelas;
+
+    @SerializedName("nama_mapel")
+    @Expose
+    public String nama_mapel;
+
+    @SerializedName("kode_mapel")
+    @Expose
+    public String kode_mapel;
+
+    @SerializedName("tgl_tambah_mapel")
+    @Expose
+    public String tgl_tambah_mapel;
+
+    @SerializedName("created_at_mapel")
+    @Expose
+    public String created_at_mapel;
+
+    //E-Raport
+    @SerializedName("id_raport_siswa")
+    @Expose
+    public String id_raport_siswa;
+
+    @SerializedName("id_siswa")
+    @Expose
+    public String id_siswa;
+
+    @SerializedName("nama_raport")
+    @Expose
+    public String nama_raport;
+
+    @SerializedName("link_file_raport")
+    @Expose
+    public String link_file_raport;
+
+    @SerializedName("tgl_raport_upload")
+    @Expose
+    public String tgl_raport_upload;
+
     //GETTER SETTER
 
     public String getAccessToken() {
@@ -395,5 +474,157 @@ public class DataModel {
 
     public void setLink_foto(String link_foto) {
         this.link_foto = link_foto;
+    }
+
+    public String getId_mapel_kelas_jadwal() {
+        return id_mapel_kelas_jadwal;
+    }
+
+    public void setId_mapel_kelas_jadwal(String id_mapel_kelas_jadwal) {
+        this.id_mapel_kelas_jadwal = id_mapel_kelas_jadwal;
+    }
+
+    public String getId_mapel_kelas() {
+        return id_mapel_kelas;
+    }
+
+    public void setId_mapel_kelas(String id_mapel_kelas) {
+        this.id_mapel_kelas = id_mapel_kelas;
+    }
+
+    public String getId_mapel() {
+        return id_mapel;
+    }
+
+    public void setId_mapel(String id_mapel) {
+        this.id_mapel = id_mapel;
+    }
+
+    public String getId_guru() {
+        return id_guru;
+    }
+
+    public void setId_guru(String id_guru) {
+        this.id_guru = id_guru;
+    }
+
+    public String getJam_mulai() {
+        return jam_mulai;
+    }
+
+    public void setJam_mulai(String jam_mulai) {
+        this.jam_mulai = jam_mulai;
+    }
+
+    public String getJam_selesai() {
+        return jam_selesai;
+    }
+
+    public void setJam_selesai(String jam_selesai) {
+        this.jam_selesai = jam_selesai;
+    }
+
+    public String getId_kelas() {
+        return id_kelas;
+    }
+
+    public void setId_kelas(String id_kelas) {
+        this.id_kelas = id_kelas;
+    }
+
+    public String getTgl_kelas() {
+        return tgl_kelas;
+    }
+
+    public void setTgl_kelas(String tgl_kelas) {
+        this.tgl_kelas = tgl_kelas;
+    }
+
+    public String getNama_hari() {
+        return nama_hari;
+    }
+
+    public void setNama_hari(String nama_hari) {
+        this.nama_hari = nama_hari;
+    }
+
+    public String getTgl_tambah_mapel_kelas() {
+        return tgl_tambah_mapel_kelas;
+    }
+
+    public void setTgl_tambah_mapel_kelas(String tgl_tambah_mapel_kelas) {
+        this.tgl_tambah_mapel_kelas = tgl_tambah_mapel_kelas;
+    }
+
+    public String getNama_mapel() {
+        return nama_mapel;
+    }
+
+    public void setNama_mapel(String nama_mapel) {
+        this.nama_mapel = nama_mapel;
+    }
+
+    public String getKode_mapel() {
+        return kode_mapel;
+    }
+
+    public void setKode_mapel(String kode_mapel) {
+        this.kode_mapel = kode_mapel;
+    }
+
+    public String getTgl_tambah_mapel() {
+        return tgl_tambah_mapel;
+    }
+
+    public void setTgl_tambah_mapel(String tgl_tambah_mapel) {
+        this.tgl_tambah_mapel = tgl_tambah_mapel;
+    }
+
+    public String getCreated_at_mapel() {
+        return created_at_mapel;
+    }
+
+    public void setCreated_at_mapel(String created_at_mapel) {
+        this.created_at_mapel = created_at_mapel;
+    }
+
+    public String getId_raport_siswa() {
+        return id_raport_siswa;
+    }
+
+    public void setId_raport_siswa(String id_raport_siswa) {
+        this.id_raport_siswa = id_raport_siswa;
+    }
+
+    public String getId_siswa() {
+        return id_siswa;
+    }
+
+    public void setId_siswa(String id_siswa) {
+        this.id_siswa = id_siswa;
+    }
+
+    public String getNama_raport() {
+        return nama_raport;
+    }
+
+    public void setNama_raport(String nama_raport) {
+        this.nama_raport = nama_raport;
+    }
+
+    public String getLink_file_raport() {
+        return link_file_raport;
+    }
+
+    public void setLink_file_raport(String link_file_raport) {
+        this.link_file_raport = link_file_raport;
+    }
+
+    public String getTgl_raport_upload() {
+        return tgl_raport_upload;
+    }
+
+    public void setTgl_raport_upload(String tgl_raport_upload) {
+        this.tgl_raport_upload = tgl_raport_upload;
     }
 }

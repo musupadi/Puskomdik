@@ -46,6 +46,24 @@
                     android:textSize="20sp"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_margin="20dp"
+            android:id="@+id/linearTanggal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/btn_round_primary">
+            <TextView
+                android:textStyle="bold"
+                android:textSize="@dimen/text_xtra_large"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/colorWhite"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Tanggal"
+                android:id="@+id/tvTanggal"
+                android:gravity="center"/>
+        </LinearLayout>
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="match_parent"

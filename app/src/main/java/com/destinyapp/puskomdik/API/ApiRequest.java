@@ -10,6 +10,7 @@ import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.POST;
+import retrofit2.http.Query;
 
 public interface ApiRequest {
     @FormUrlEncoded
@@ -37,5 +38,12 @@ public interface ApiRequest {
 
     @GET("ekskul_self")
     Call<ResponseModel> EskulSelf(@Header("Authorization") String authHeader);
+
+    @GET("getmapelkelasjadwal")
+    Call<ResponseModel> GetMapel(@Header("Authorization") String authHeader,
+                                  @Query("tglKelas") String tglKelas);
+
+    @GET("raport")
+    Call<ResponseModel> Raport(@Header("Authorization") String authHeader);
 
 }
