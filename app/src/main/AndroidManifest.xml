@@ -69,7 +69,7 @@
             android:name=".Activity.menu.Menu1.UjianActivity"
             android:theme="@style/AppThemeNoAction" />
         <activity
-            android:name=".Activity.menu.Menu1.TemanActivity"
+            android:name=".Activity.menu.Menu1.Finished.TemanActivity"
             android:theme="@style/AppThemeNoAction" />
         <activity
             android:name=".Activity.menu.Menu1.TugasActivity"
@@ -96,7 +96,7 @@
             android:name=".Activity.menu.Menu1.Finished.PPDBActivity"
             android:theme="@style/AppThemeNoAction" />
         <activity
-            android:name=".Activity.menu.Menu1.AgendaSekolahActivity"
+            android:name=".Activity.menu.Menu1.Finished.AgendaSekolahActivity"
             android:theme="@style/AppThemeNoAction" />
         <activity
             android:name=".Activity.menu.Menu1.Finished.ProfilSekolahActivity"

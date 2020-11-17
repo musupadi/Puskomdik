@@ -218,6 +218,46 @@ public class DataModel {
     @Expose
     public String tgl_raport_upload;
 
+    //Poin
+    @SerializedName("poin")
+    @Expose
+    public String poin;
+
+    //Poin
+    @SerializedName("nama_kelas")
+    @Expose
+    public String nama_kelas;
+
+    @SerializedName("nama_siswa")
+    @Expose
+    public String nama_siswa;
+
+    //Agenda
+    @SerializedName("id_agenda_sekolah")
+    @Expose
+    public String id_agenda_sekolah;
+
+    @SerializedName("judul_agenda")
+    @Expose
+    public String judul_agenda;
+
+    @SerializedName("cover_agenda")
+    @Expose
+    public String cover_agenda;
+
+    @SerializedName("isi_agenda")
+    @Expose
+    public String isi_agenda;
+
+    @SerializedName("status_agenda")
+    @Expose
+    public String status_agenda;
+
+    @SerializedName("created_at_agenda")
+    @Expose
+    public String created_at_agenda;
+
+
     //GETTER SETTER
 
     public String getAccessToken() {
@@ -626,5 +666,77 @@ public class DataModel {
 
     public void setTgl_raport_upload(String tgl_raport_upload) {
         this.tgl_raport_upload = tgl_raport_upload;
+    }
+
+    public String getPoin() {
+        return poin;
+    }
+
+    public void setPoin(String poin) {
+        this.poin = poin;
+    }
+
+    public String getNama_kelas() {
+        return nama_kelas;
+    }
+
+    public void setNama_kelas(String nama_kelas) {
+        this.nama_kelas = nama_kelas;
+    }
+
+    public String getNama_siswa() {
+        return nama_siswa;
+    }
+
+    public void setNama_siswa(String nama_siswa) {
+        this.nama_siswa = nama_siswa;
+    }
+
+    public String getId_agenda_sekolah() {
+        return id_agenda_sekolah;
+    }
+
+    public void setId_agenda_sekolah(String id_agenda_sekolah) {
+        this.id_agenda_sekolah = id_agenda_sekolah;
+    }
+
+    public String getJudul_agenda() {
+        return judul_agenda;
+    }
+
+    public void setJudul_agenda(String judul_agenda) {
+        this.judul_agenda = judul_agenda;
+    }
+
+    public String getCover_agenda() {
+        return cover_agenda;
+    }
+
+    public void setCover_agenda(String cover_agenda) {
+        this.cover_agenda = cover_agenda;
+    }
+
+    public String getIsi_agenda() {
+        return isi_agenda;
+    }
+
+    public void setIsi_agenda(String isi_agenda) {
+        this.isi_agenda = isi_agenda;
+    }
+
+    public String getStatus_agenda() {
+        return status_agenda;
+    }
+
+    public void setStatus_agenda(String status_agenda) {
+        this.status_agenda = status_agenda;
+    }
+
+    public String getCreated_at_agenda() {
+        return created_at_agenda;
+    }
+
+    public void setCreated_at_agenda(String created_at_agenda) {
+        this.created_at_agenda = created_at_agenda;
     }
 }

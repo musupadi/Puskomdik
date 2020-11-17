@@ -25,7 +25,8 @@ import com.destinyapp.puskomdik.API.RetroServer;
 import com.destinyapp.puskomdik.Activity.Adapter.AdapterKabarBerita;
 import com.destinyapp.puskomdik.Activity.Adapter.AdapterKegiatan;
 import com.destinyapp.puskomdik.Activity.LoginActivity;
-import com.destinyapp.puskomdik.Activity.menu.Menu1.AgendaSekolahActivity;
+import com.destinyapp.puskomdik.Activity.MainActivity;
+import com.destinyapp.puskomdik.Activity.menu.Menu1.Finished.AgendaSekolahActivity;
 import com.destinyapp.puskomdik.Activity.menu.Menu1.EHadirActivity;
 import com.destinyapp.puskomdik.Activity.menu.Menu1.EraportActivity;
 import com.destinyapp.puskomdik.Activity.menu.Menu1.Finished.Eskul.EskulActivity;
@@ -37,7 +38,7 @@ import com.destinyapp.puskomdik.Activity.menu.Menu1.Finished.PPDBActivity;
 import com.destinyapp.puskomdik.Activity.menu.Menu1.Finished.PrestasiActivity;
 import com.destinyapp.puskomdik.Activity.menu.Menu1.Finished.ProfilSekolahActivity;
 import com.destinyapp.puskomdik.Activity.menu.Menu1.Finished.StrukturOraganisasiActivity;
-import com.destinyapp.puskomdik.Activity.menu.Menu1.TemanActivity;
+import com.destinyapp.puskomdik.Activity.menu.Menu1.Finished.TemanActivity;
 import com.destinyapp.puskomdik.Activity.menu.Menu1.TugasActivity;
 import com.destinyapp.puskomdik.Activity.menu.Menu1.UjianActivity;
 import com.destinyapp.puskomdik.Activity.menu.Menu2.BiayaAkademikActivity;
@@ -69,7 +70,7 @@ import retrofit2.Response;
 public class HomeFragment extends Fragment {
 
     Switch SwitchMasuk;
-    TextView CheckMasuk;
+    TextView CheckMasuk,Poin;
     LinearLayout ProfilSekolah,AgendaSekolah,Eskul,Loker,KabarSekolah,KabarBerita,Prestasi,PPDB,StrukturSekolah,JadwalPelajaran,LihatSemua;
     //DIALOG 1
     LinearLayout DProfilSekolah,DAgendaSekolah,DEskul,DLoker,DKabarBerita,DPrestasi,DPPDB,DStrukturSekolah,DJadwalPelajaran,DKehadiran,DEHadir,DTugas,DTeman,DUjian,DEraport;
@@ -125,6 +126,7 @@ public class HomeFragment extends Fragment {
         KabarSekolah = view.findViewById(R.id.linearKabarSekolah);
         KabarBerita = view.findViewById(R.id.linearLihatSemuaKabarBerita);
         LihatSemua = view.findViewById(R.id.linearLihatSemua);
+        Poin = view.findViewById(R.id.tvPoint);
         dialog = new Dialog(getActivity());
         dialog.setContentView(R.layout.dialog_menu_all);
         dialog.getWindow().setLayout(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
@@ -166,6 +168,39 @@ public class HomeFragment extends Fragment {
         ONCLICKDIALOG();
         Header();
         KabarBerita();
+        GetPoint();
+    }
+    private void GetPoint(){
+        ApiRequest api = RetroServer.getClient().create(ApiRequest.class);
+        Call<ResponseModel> Point = api.PointSiswa(destiny.AUTH(Token));
+        Point.enqueue(new Callback<ResponseModel>() {
+            @Override
+            public void onResponse(Call<ResponseModel> call, Response<ResponseModel> response) {
+                try {
+                    if (response.body().getStatusCode().equals("000")){
+                        Poin.setText(response.body().getData().get(0).getPoin());
+                    }else if (response.body().getStatusCode().equals("001") || response.body().getStatusCode().equals("002")){
+                        destiny.AutoLogin(Username,Password,getActivity());
+                        Intent intent = new Intent(getActivity(), MainActivity.class);
+                        startActivity(intent);
+                        getActivity().finish();
+                    }else{
+                        Toast.makeText(getActivity(), "Terjadi Kesalahan ", Toast.LENGTH_SHORT).show();
+                    }
+                }catch (Exception e){
+                    Toast.makeText(getActivity(), "Terjadi Kesalahan User akan Terlogout", Toast.LENGTH_SHORT).show();
+                    dbHelper.Logout();
+                    Intent intent = new Intent(getActivity(), LoginActivity.class);
+                    startActivity(intent);
+                    getActivity().finish();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponseModel> call, Throwable t) {
+                Toast.makeText(getActivity(), "Koneksi Gagal", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
     private void Header(){
         mManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL,false);
@@ -183,7 +218,9 @@ public class HomeFragment extends Fragment {
                         mAdapter.notifyDataSetChanged();
                     }else if (response.body().getStatusCode().equals("001") || response.body().getStatusCode().equals("002")){
                         destiny.AutoLogin(Username,Password,getActivity());
-                        Header();
+                        Intent intent = new Intent(getActivity(), MainActivity.class);
+                        startActivity(intent);
+                        getActivity().finish();
                     }else{
                         Toast.makeText(getActivity(), "Terjadi Kesalahan ", Toast.LENGTH_SHORT).show();
                     }
@@ -218,7 +255,9 @@ public class HomeFragment extends Fragment {
                         mAdapter.notifyDataSetChanged();
                     }else if (response.body().getStatusCode().equals("001") || response.body().getStatusCode().equals("002")){
                         destiny.AutoLogin(Username,Password,getActivity());
-                        KabarBerita();
+                        Intent intent = new Intent(getActivity(), MainActivity.class);
+                        startActivity(intent);
+                        getActivity().finish();
                     }else{
                         Toast.makeText(getActivity(), "Terjadi Kesalahan ", Toast.LENGTH_SHORT).show();
                     }
