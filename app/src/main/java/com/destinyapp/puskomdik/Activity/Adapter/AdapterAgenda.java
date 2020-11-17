@@ -1,16 +1,20 @@
 package com.destinyapp.puskomdik.Activity.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.destinyapp.puskomdik.Activity.menu.Menu1.Finished.AgendaSekolah.DetailAgendaActivity;
+import com.destinyapp.puskomdik.Activity.menu.Menu1.Finished.KabarSekolah.DetailKabarSekolahActivity;
 import com.destinyapp.puskomdik.Method.Destiny;
 import com.destinyapp.puskomdik.Model.DataModel;
 import com.destinyapp.puskomdik.R;
@@ -49,6 +53,17 @@ public class AdapterAgenda extends RecyclerView.Adapter<AdapterAgenda.HolderData
         Glide.with(ctx)
                 .load(destiny.BASE_URL()+dm.getCover_agenda())
                 .into(holderData.Image);
+        holderData.card.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(ctx, DetailAgendaActivity.class);
+                i.putExtra("JUDUL", dm.getJudul_agenda());
+                i.putExtra("ISI",dm.getIsi_agenda());
+                i.putExtra("TANGGAL",dm.getCreated_at_agenda());
+                i.putExtra("GAMBAR",destiny.BASE_URL()+dm.getCover_agenda());
+                ctx.startActivity(i);
+            }
+        });
     }
 
     @Override
@@ -59,12 +74,14 @@ public class AdapterAgenda extends RecyclerView.Adapter<AdapterAgenda.HolderData
     class HolderData extends RecyclerView.ViewHolder{
         ImageView Image;
         TextView Judul,Deskripsi,Tanggal;
+        LinearLayout card;
         public HolderData(View v){
             super(v);
             Image = v.findViewById(R.id.ivGambar);
             Judul = v.findViewById(R.id.tvJudul);
             Deskripsi = v.findViewById(R.id.tvIsi);
             Tanggal = v.findViewById(R.id.tvTanggal);
+            card = v.findViewById(R.id.LayoutCardView);
         }
     }
 }

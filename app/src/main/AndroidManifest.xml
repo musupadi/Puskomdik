@@ -28,40 +28,56 @@
         android:theme="@style/Theme.Puskomdik"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".Activity.menu.Menu1.Finished.Eskul.DetailEskulActivity"
+            android:name=".Activity.menu.Menu1.Finished.AgendaSekolah.DetailAgendaActivity"
             android:theme="@style/AppThemeNoAction"></activity>
+        <activity
+            android:name=".Activity.menu.Menu1.Finished.Eskul.DetailEskulActivity"
+            android:theme="@style/AppThemeNoAction" />
         <activity
             android:name=".Activity.menu.Menu1.Finished.KabarSekolah.DetailKabarSekolahActivity"
             android:theme="@style/AppThemeNoAction" />
         <activity
             android:name=".Activity.menu.Menu2.KoperasiActivity"
             android:theme="@style/AppThemeNoAction" />
-        <activity android:name=".Activity.menu.Menu2.BiayaAkademikActivity"
-            android:theme="@style/AppThemeNoAction"/>
-        <activity android:name=".Activity.menu.Menu2.RAKSActivity"
-            android:theme="@style/AppThemeNoAction"/>
-        <activity android:name=".Activity.menu.Menu2.EWalletActivity"
-            android:theme="@style/AppThemeNoAction"/>
-        <activity android:name=".Activity.menu.Menu2.PaymentActivity"
-            android:theme="@style/AppThemeNoAction"/>
-        <activity android:name=".Activity.menu.Menu2.GraduasiActivity"
-            android:theme="@style/AppThemeNoAction"/>
-        <activity android:name=".Activity.menu.Menu2.GalleryActivity"
-            android:theme="@style/AppThemeNoAction"/>
-        <activity android:name=".Activity.menu.Menu2.MarketplaceActivity"
-            android:theme="@style/AppThemeNoAction"/>
-        <activity android:name=".Activity.menu.Menu2.TeachingFactoryActivity"
-            android:theme="@style/AppThemeNoAction"/>
-        <activity android:name=".Activity.menu.Menu2.MediaPembelajaranActivity"
-            android:theme="@style/AppThemeNoAction"/>
-        <activity android:name=".Activity.menu.Menu2.TryOutActivity"
-            android:theme="@style/AppThemeNoAction"/>
-        <activity android:name=".Activity.menu.Menu2.VConActivity"
-            android:theme="@style/AppThemeNoAction"/>
-        <activity android:name=".Activity.menu.Menu2.PerpustakaanOnlineActivity"
-            android:theme="@style/AppThemeNoAction"/>
-        <activity android:name=".Activity.menu.Menu2.GuruActivity"
-            android:theme="@style/AppThemeNoAction"/>
+        <activity
+            android:name=".Activity.menu.Menu2.BiayaAkademikActivity"
+            android:theme="@style/AppThemeNoAction" />
+        <activity
+            android:name=".Activity.menu.Menu2.RAKSActivity"
+            android:theme="@style/AppThemeNoAction" />
+        <activity
+            android:name=".Activity.menu.Menu2.EWalletActivity"
+            android:theme="@style/AppThemeNoAction" />
+        <activity
+            android:name=".Activity.menu.Menu2.PaymentActivity"
+            android:theme="@style/AppThemeNoAction" />
+        <activity
+            android:name=".Activity.menu.Menu2.GraduasiActivity"
+            android:theme="@style/AppThemeNoAction" />
+        <activity
+            android:name=".Activity.menu.Menu2.GalleryActivity"
+            android:theme="@style/AppThemeNoAction" />
+        <activity
+            android:name=".Activity.menu.Menu2.MarketplaceActivity"
+            android:theme="@style/AppThemeNoAction" />
+        <activity
+            android:name=".Activity.menu.Menu2.TeachingFactoryActivity"
+            android:theme="@style/AppThemeNoAction" />
+        <activity
+            android:name=".Activity.menu.Menu2.MediaPembelajaranActivity"
+            android:theme="@style/AppThemeNoAction" />
+        <activity
+            android:name=".Activity.menu.Menu2.TryOutActivity"
+            android:theme="@style/AppThemeNoAction" />
+        <activity
+            android:name=".Activity.menu.Menu2.VConActivity"
+            android:theme="@style/AppThemeNoAction" />
+        <activity
+            android:name=".Activity.menu.Menu2.PerpustakaanOnlineActivity"
+            android:theme="@style/AppThemeNoAction" />
+        <activity
+            android:name=".Activity.menu.Menu2.GuruActivity"
+            android:theme="@style/AppThemeNoAction" />
         <activity
             android:name=".Activity.menu.Menu1.EraportActivity"
             android:theme="@style/AppThemeNoAction" />
@@ -96,7 +112,7 @@
             android:name=".Activity.menu.Menu1.Finished.PPDBActivity"
             android:theme="@style/AppThemeNoAction" />
         <activity
-            android:name=".Activity.menu.Menu1.Finished.AgendaSekolahActivity"
+            android:name=".Activity.menu.Menu1.Finished.AgendaSekolah.AgendaSekolahActivity"
             android:theme="@style/AppThemeNoAction" />
         <activity
             android:name=".Activity.menu.Menu1.Finished.ProfilSekolahActivity"

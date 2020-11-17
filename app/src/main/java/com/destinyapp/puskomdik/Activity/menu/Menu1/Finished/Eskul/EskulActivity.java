@@ -15,7 +15,6 @@ import com.destinyapp.puskomdik.API.ApiRequest;
 import com.destinyapp.puskomdik.API.RetroServer;
 import com.destinyapp.puskomdik.Activity.Adapter.AdapterEskul;
 import com.destinyapp.puskomdik.Activity.LoginActivity;
-import com.destinyapp.puskomdik.Activity.menu.Menu1.Finished.AgendaSekolahActivity;
 import com.destinyapp.puskomdik.Method.Destiny;
 import com.destinyapp.puskomdik.Model.DataModel;
 import com.destinyapp.puskomdik.Model.ResponseModel;

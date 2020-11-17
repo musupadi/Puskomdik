@@ -1,6 +1,8 @@
 package com.destinyapp.puskomdik.Activity.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -43,6 +45,13 @@ public class AdapterEReport extends RecyclerView.Adapter<AdapterEReport.HolderDa
         destiny = new Destiny();
         final DataModel dm = mList.get(posistion);
         holderData.Nama.setText(dm.getNama_raport());
+        holderData.card.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(dm.getLink_file_raport()));
+                ctx.startActivity(browserIntent);
+            }
+        });
     }
 
     @Override

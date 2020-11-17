@@ -26,7 +26,7 @@ import com.destinyapp.puskomdik.Activity.Adapter.AdapterKabarBerita;
 import com.destinyapp.puskomdik.Activity.Adapter.AdapterKegiatan;
 import com.destinyapp.puskomdik.Activity.LoginActivity;
 import com.destinyapp.puskomdik.Activity.MainActivity;
-import com.destinyapp.puskomdik.Activity.menu.Menu1.Finished.AgendaSekolahActivity;
+import com.destinyapp.puskomdik.Activity.menu.Menu1.Finished.AgendaSekolah.AgendaSekolahActivity;
 import com.destinyapp.puskomdik.Activity.menu.Menu1.EHadirActivity;
 import com.destinyapp.puskomdik.Activity.menu.Menu1.EraportActivity;
 import com.destinyapp.puskomdik.Activity.menu.Menu1.Finished.Eskul.EskulActivity;
