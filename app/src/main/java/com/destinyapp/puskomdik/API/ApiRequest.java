@@ -39,8 +39,8 @@ public interface ApiRequest {
                                    @Field("passwordNew") String passwordNew,
                                      @Field("passwordConfirm") String passwordConfirm,
                                      @Field("passwordOld") String passwordOld);
-    //
-    
+    //GET
+
     @GET("kabarsekolah")
     Call<ResponseModel> KabarSekolah(@Header("Authorization") String authHeader);
 
@@ -73,5 +73,8 @@ public interface ApiRequest {
 
     @GET("agenda_sekolah")
     Call<ResponseModel> AgendaSekolah(@Header("Authorization") String authHeader);
+
+    @GET("tugas")
+    Call<ResponseModel> Tugas(@Header("Authorization") String authHeader);
 
 }

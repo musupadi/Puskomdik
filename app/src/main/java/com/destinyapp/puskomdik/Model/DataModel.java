@@ -257,6 +257,28 @@ public class DataModel {
     @Expose
     public String created_at_agenda;
 
+    //Tugas
+    @SerializedName("id_tugas")
+    @Expose
+    public String id_tugas;
+
+    @SerializedName("isi_tugas")
+    @Expose
+    public String isi_tugas;
+
+    @SerializedName("tgl_mulai")
+    @Expose
+    public String tgl_mulai;
+
+    @SerializedName("tgl_selesai")
+    @Expose
+    public String tgl_selesai;
+
+    @SerializedName("tugas_created_at")
+    @Expose
+    public String tugas_created_at;
+
+
 
     //GETTER SETTER
 
@@ -738,5 +760,45 @@ public class DataModel {
 
     public void setCreated_at_agenda(String created_at_agenda) {
         this.created_at_agenda = created_at_agenda;
+    }
+
+    public String getId_tugas() {
+        return id_tugas;
+    }
+
+    public void setId_tugas(String id_tugas) {
+        this.id_tugas = id_tugas;
+    }
+
+    public String getIsi_tugas() {
+        return isi_tugas;
+    }
+
+    public void setIsi_tugas(String isi_tugas) {
+        this.isi_tugas = isi_tugas;
+    }
+
+    public String getTgl_mulai() {
+        return tgl_mulai;
+    }
+
+    public void setTgl_mulai(String tgl_mulai) {
+        this.tgl_mulai = tgl_mulai;
+    }
+
+    public String getTgl_selesai() {
+        return tgl_selesai;
+    }
+
+    public void setTgl_selesai(String tgl_selesai) {
+        this.tgl_selesai = tgl_selesai;
+    }
+
+    public String getTugas_created_at() {
+        return tugas_created_at;
+    }
+
+    public void setTugas_created_at(String tugas_created_at) {
+        this.tugas_created_at = tugas_created_at;
     }
 }

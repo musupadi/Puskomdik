@@ -218,8 +218,8 @@ public class Destiny {
     public String MagicDateChange(String dates){
         String result = "";
         String year = dates.substring(0,4);
-        String month = dates.substring(5,6);
-        String day = dates.substring(7,9);
+        String month = dates.substring(5,7);
+        String day = dates.substring(8,10);
 
         String MONTH = "Januari";
         if (month.equals("01") || month.equals("1")){
