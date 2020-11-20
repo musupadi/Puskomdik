@@ -43,7 +43,7 @@ public class AdapterUjian extends RecyclerView.Adapter<AdapterUjian.HolderData> 
         destiny = new Destiny();
         final DataModel dm = mList.get(posistion);
         holderData.Mapel.setText(dm.getNama_mapel());
-        holderData.Guru.setText(dm.getNama_hari()+", "+destiny.MagicDateChange(dm.getTgl_ujian()));
+        holderData.Guru.setText(dm.getNama_hari()+", "+ destiny.MagicDateChange(dm.getTgl_ujian()));
         holderData.Mulai.setText(dm.getJam_mulai());
         holderData.Selesai.setText(dm.getJam_selesai());
     }

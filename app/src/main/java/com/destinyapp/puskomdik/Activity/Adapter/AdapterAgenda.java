@@ -14,7 +14,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.destinyapp.puskomdik.Activity.menu.Menu1.Finished.AgendaSekolah.DetailAgendaActivity;
-import com.destinyapp.puskomdik.Activity.menu.Menu1.Finished.KabarSekolah.DetailKabarSekolahActivity;
 import com.destinyapp.puskomdik.Method.Destiny;
 import com.destinyapp.puskomdik.Model.DataModel;
 import com.destinyapp.puskomdik.R;
@@ -60,7 +59,7 @@ public class AdapterAgenda extends RecyclerView.Adapter<AdapterAgenda.HolderData
                 i.putExtra("JUDUL", dm.getJudul_agenda());
                 i.putExtra("ISI",dm.getIsi_agenda());
                 i.putExtra("TANGGAL",dm.getCreated_at_agenda());
-                i.putExtra("GAMBAR",destiny.BASE_URL()+dm.getCover_agenda());
+                i.putExtra("GAMBAR", destiny.BASE_URL()+dm.getCover_agenda());
                 ctx.startActivity(i);
             }
         });

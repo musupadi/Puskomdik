@@ -7,7 +7,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.util.Log;
@@ -18,11 +17,8 @@ import android.widget.Toast;
 
 import com.destinyapp.puskomdik.API.ApiRequest;
 import com.destinyapp.puskomdik.API.RetroServer;
-import com.destinyapp.puskomdik.Activity.Adapter.AdapterAnggotaEskul;
 import com.destinyapp.puskomdik.Activity.Adapter.AdapterFotoEskul;
-import com.destinyapp.puskomdik.Activity.menu.Menu1.Finished.PrestasiActivity;
 import com.destinyapp.puskomdik.Method.Destiny;
-import com.destinyapp.puskomdik.Model.Eskul.Eskul;
 import com.destinyapp.puskomdik.Model.Eskul.Response;
 import com.destinyapp.puskomdik.R;
 import com.destinyapp.puskomdik.SharedPreferance.DB_Helper;

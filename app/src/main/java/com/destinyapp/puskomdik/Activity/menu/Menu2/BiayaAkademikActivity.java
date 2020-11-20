@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.RelativeLayout;
 
-import com.destinyapp.puskomdik.Activity.menu.Menu1.UjianActivity;
 import com.destinyapp.puskomdik.Method.Destiny;
 import com.destinyapp.puskomdik.Model.DataModel;
 import com.destinyapp.puskomdik.R;

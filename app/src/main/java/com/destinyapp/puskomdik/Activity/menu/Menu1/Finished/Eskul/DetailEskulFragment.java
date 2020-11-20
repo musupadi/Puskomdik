@@ -1,6 +1,5 @@
 package com.destinyapp.puskomdik.Activity.menu.Menu1.Finished.Eskul;
 
-import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 
@@ -14,15 +13,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.destinyapp.puskomdik.API.ApiRequest;
 import com.destinyapp.puskomdik.API.RetroServer;
-import com.destinyapp.puskomdik.Activity.Adapter.AdapterEskul;
-import com.destinyapp.puskomdik.Activity.LoginActivity;
 import com.destinyapp.puskomdik.Method.Destiny;
 import com.destinyapp.puskomdik.Model.Eskul.Response;
 import com.destinyapp.puskomdik.R;

@@ -1,19 +1,15 @@
 package com.destinyapp.puskomdik.Activity.Adapter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
-import com.destinyapp.puskomdik.Activity.menu.Menu1.Finished.KabarSekolah.DetailKabarSekolahActivity;
 import com.destinyapp.puskomdik.Method.Destiny;
 import com.destinyapp.puskomdik.Model.DataModel;
 import com.destinyapp.puskomdik.R;

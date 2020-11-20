@@ -6,14 +6,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.destinyapp.puskomdik.Method.Destiny;
-import com.destinyapp.puskomdik.Model.Eskul.Eskul;
 import com.destinyapp.puskomdik.R;
 import com.destinyapp.puskomdik.SharedPreferance.DB_Helper;
 

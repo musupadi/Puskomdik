@@ -13,7 +13,6 @@ import android.widget.Toast;
 
 import com.destinyapp.puskomdik.API.ApiRequest;
 import com.destinyapp.puskomdik.API.RetroServer;
-import com.destinyapp.puskomdik.Activity.Adapter.AdapterTeman;
 import com.destinyapp.puskomdik.Activity.Adapter.AdapterUjian;
 import com.destinyapp.puskomdik.Activity.LoginActivity;
 import com.destinyapp.puskomdik.Activity.menu.Menu1.Finished.TemanActivity;

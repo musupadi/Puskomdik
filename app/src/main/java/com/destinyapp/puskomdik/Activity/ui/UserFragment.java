@@ -30,7 +30,6 @@ import com.afollestad.materialdialogs.MaterialDialog;
 import com.bumptech.glide.Glide;
 import com.destinyapp.puskomdik.API.ApiRequest;
 import com.destinyapp.puskomdik.API.RetroServer;
-import com.destinyapp.puskomdik.Activity.HomeActivity;
 import com.destinyapp.puskomdik.Activity.LoginActivity;
 import com.destinyapp.puskomdik.Activity.MainActivity;
 import com.destinyapp.puskomdik.BuildConfig;

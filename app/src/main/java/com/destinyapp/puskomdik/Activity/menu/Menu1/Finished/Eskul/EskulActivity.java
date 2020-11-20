@@ -16,10 +16,8 @@ import com.destinyapp.puskomdik.API.RetroServer;
 import com.destinyapp.puskomdik.Activity.Adapter.AdapterEskul;
 import com.destinyapp.puskomdik.Activity.LoginActivity;
 import com.destinyapp.puskomdik.Method.Destiny;
-import com.destinyapp.puskomdik.Model.DataModel;
 import com.destinyapp.puskomdik.Model.Eskul.Eskul;
 import com.destinyapp.puskomdik.Model.Eskul.Response;
-import com.destinyapp.puskomdik.Model.ResponseModel;
 import com.destinyapp.puskomdik.R;
 import com.destinyapp.puskomdik.SharedPreferance.DB_Helper;
 

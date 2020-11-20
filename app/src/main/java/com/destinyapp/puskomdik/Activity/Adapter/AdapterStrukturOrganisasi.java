@@ -16,8 +16,6 @@ import com.destinyapp.puskomdik.Model.DataModel;
 import com.destinyapp.puskomdik.R;
 import com.destinyapp.puskomdik.SharedPreferance.DB_Helper;
 
-import org.w3c.dom.Text;
-
 import java.util.List;
 
 public class AdapterStrukturOrganisasi extends RecyclerView.Adapter<AdapterStrukturOrganisasi.HolderData> {

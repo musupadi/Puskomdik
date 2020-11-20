@@ -14,9 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.destinyapp.puskomdik.Activity.menu.Menu1.Finished.Eskul.DetailEskulActivity;
-import com.destinyapp.puskomdik.Activity.menu.Menu1.Finished.KabarSekolah.DetailKabarSekolahActivity;
 import com.destinyapp.puskomdik.Method.Destiny;
-import com.destinyapp.puskomdik.Model.DataModel;
 import com.destinyapp.puskomdik.Model.Eskul.Eskul;
 import com.destinyapp.puskomdik.R;
 import com.destinyapp.puskomdik.SharedPreferance.DB_Helper;

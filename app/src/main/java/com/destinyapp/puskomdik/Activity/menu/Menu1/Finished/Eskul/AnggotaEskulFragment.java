@@ -1,6 +1,5 @@
 package com.destinyapp.puskomdik.Activity.menu.Menu1.Finished.Eskul;
 
-import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 
@@ -14,25 +13,14 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
 import com.destinyapp.puskomdik.API.ApiRequest;
 import com.destinyapp.puskomdik.API.RetroServer;
 import com.destinyapp.puskomdik.Activity.Adapter.AdapterAnggotaEskul;
-import com.destinyapp.puskomdik.Activity.Adapter.AdapterEReport;
-import com.destinyapp.puskomdik.Activity.Adapter.AdapterJadwalPelajaran;
-import com.destinyapp.puskomdik.Activity.LoginActivity;
-import com.destinyapp.puskomdik.Activity.menu.Menu1.EHadirActivity;
-import com.destinyapp.puskomdik.Activity.menu.Menu1.EraportActivity;
-import com.destinyapp.puskomdik.Activity.menu.Menu1.Finished.PrestasiActivity;
-import com.destinyapp.puskomdik.Activity.menu.Menu1.JadwalPelajaranActivity;
 import com.destinyapp.puskomdik.Method.Destiny;
-import com.destinyapp.puskomdik.Model.DataModel;
 import com.destinyapp.puskomdik.Model.Eskul.Eskul;
 import com.destinyapp.puskomdik.Model.Eskul.Response;
-import com.destinyapp.puskomdik.Model.ResponseModel;
 import com.destinyapp.puskomdik.R;
 import com.destinyapp.puskomdik.SharedPreferance.DB_Helper;
 

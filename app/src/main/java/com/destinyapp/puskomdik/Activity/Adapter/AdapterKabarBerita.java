@@ -59,7 +59,7 @@ public class AdapterKabarBerita extends RecyclerView.Adapter<AdapterKabarBerita.
                 i.putExtra("JUDUL", dm.getJudul_kabar());
                 i.putExtra("ISI",dm.getIsi_kabar());
                 i.putExtra("TANGGAL",dm.getCreated_at_kabar());
-                i.putExtra("GAMBAR",destiny.BASE_URL()+dm.getCover_kabar());
+                i.putExtra("GAMBAR", destiny.BASE_URL()+dm.getCover_kabar());
                 ctx.startActivity(i);
             }
         });

@@ -9,27 +9,15 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
-import com.destinyapp.puskomdik.API.ApiRequest;
-import com.destinyapp.puskomdik.API.RetroServer;
-import com.destinyapp.puskomdik.Activity.Adapter.AdapterEskul;
 import com.destinyapp.puskomdik.Activity.Adapter.TabPagerAdapter;
-import com.destinyapp.puskomdik.Activity.LoginActivity;
 import com.destinyapp.puskomdik.Method.Destiny;
-import com.destinyapp.puskomdik.Model.ResponseModel;
 import com.destinyapp.puskomdik.R;
 import com.destinyapp.puskomdik.SharedPreferance.DB_Helper;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.tabs.TabLayout;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 public class DetailEskulActivity extends AppCompatActivity {
     Destiny destiny;
