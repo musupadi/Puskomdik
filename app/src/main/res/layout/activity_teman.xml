@@ -10,6 +10,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+        <TextView
+            android:layout_width="0.00001dp"
+            android:layout_height="0.0001dp"
+            android:text="2"
+            android:id="@+id/tvId"/>
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="?actionBarSize"
@@ -46,7 +51,31 @@
                     android:textSize="20sp"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
-
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardElevation="4dp"
+            card_view:cardCornerRadius="4dp"
+            android:layout_margin="20dp">
+            <LinearLayout
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kelas"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="bold"/>
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/Izin"
+                    android:id="@+id/spinnerKelas"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="match_parent"

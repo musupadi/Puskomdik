@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -23,8 +24,9 @@ public class DetailAgendaActivity extends AppCompatActivity {
 
     //DETAIL KABAR
     String JUDUL,ISI,TANGGAL,GAMBAR;
-    TextView judul,isi,tanggal;
+    TextView judul,tanggal;
     ImageView gambar;
+    WebView isiAgenda;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,7 +56,7 @@ public class DetailAgendaActivity extends AppCompatActivity {
     }
     private void Declaration(){
         judul = findViewById(R.id.tvJudulAgenda);
-        isi = findViewById(R.id.tvIsiAgenda);
+        isiAgenda = findViewById(R.id.webIsi);
         tanggal = findViewById(R.id.tvTanggal);
         gambar = findViewById(R.id.ivGambar);
     }
@@ -65,7 +67,7 @@ public class DetailAgendaActivity extends AppCompatActivity {
         TANGGAL = intent.getExtras().getString("TANGGAL");
         GAMBAR = intent.getExtras().getString("GAMBAR");
         judul.setText(JUDUL);
-        isi.setText(ISI);
+        isiAgenda.loadData(ISI,"text/html","UTF-8");
         tanggal.setText(TANGGAL);
         Glide.with(this)
                 .load(GAMBAR)

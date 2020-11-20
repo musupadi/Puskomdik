@@ -4,13 +4,12 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
 import com.destinyapp.puskomdik.Method.Destiny;
 import com.destinyapp.puskomdik.Model.DataModel;
 import com.destinyapp.puskomdik.R;
@@ -18,7 +17,7 @@ import com.destinyapp.puskomdik.SharedPreferance.DB_Helper;
 
 import java.util.List;
 
-public class AdapterPrestasi extends RecyclerView.Adapter<AdapterPrestasi.HolderData> {
+public class AdapterUjian extends RecyclerView.Adapter<AdapterUjian.HolderData>  {
     private List<DataModel> mList;
     private Context ctx;
 
@@ -26,7 +25,7 @@ public class AdapterPrestasi extends RecyclerView.Adapter<AdapterPrestasi.Holder
     Boolean onClick=false;
     RecyclerView recyclerView;
     Destiny destiny;
-    public AdapterPrestasi(Context ctx, List<DataModel> mList){
+    public AdapterUjian(Context ctx, List<DataModel> mList){
         this.ctx = ctx;
         this.mList = mList;
     }
@@ -34,7 +33,7 @@ public class AdapterPrestasi extends RecyclerView.Adapter<AdapterPrestasi.Holder
     @NonNull
     @Override
     public HolderData onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View layout = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.list_prestasi,viewGroup,false);
+        View layout = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.list_ujian,viewGroup,false);
         HolderData holder = new HolderData(layout);
         return holder;
     }
@@ -43,12 +42,10 @@ public class AdapterPrestasi extends RecyclerView.Adapter<AdapterPrestasi.Holder
     public void onBindViewHolder(@NonNull final HolderData holderData, int posistion) {
         destiny = new Destiny();
         final DataModel dm = mList.get(posistion);
-        holderData.Judul.setText(dm.getJudul_prestasi());
-        holderData.Deskripsi.setText(destiny.SmallDescription(destiny.FilterTextToJava(dm.getDeskripsi_prestasi())));
-        holderData.Tanggal.setText(dm.getTgl_prestasi());
-        Glide.with(ctx)
-                .load(destiny.BASE_URL()+dm.getFoto_prestasi())
-                .into(holderData.Image);
+        holderData.Mapel.setText(dm.getNama_mapel());
+        holderData.Guru.setText(dm.getNama_hari()+", "+destiny.MagicDateChange(dm.getTgl_ujian()));
+        holderData.Mulai.setText(dm.getJam_mulai());
+        holderData.Selesai.setText(dm.getJam_selesai());
     }
 
     @Override
@@ -56,15 +53,18 @@ public class AdapterPrestasi extends RecyclerView.Adapter<AdapterPrestasi.Holder
         return mList.size();
     }
 
-    class HolderData extends RecyclerView.ViewHolder{
-        ImageView Image;
-        TextView Judul,Deskripsi,Tanggal;
+    class HolderData extends RecyclerView.ViewHolder{ ;
+        TextView Mapel,Guru,Mulai,Selesai;
+        LinearLayout card;
         public HolderData(View v){
             super(v);
-            Image = v.findViewById(R.id.ivGambar);
-            Judul = v.findViewById(R.id.tvJudul);
-            Deskripsi = v.findViewById(R.id.tvDeskripsi);
-            Tanggal = v.findViewById(R.id.tvTanggal);
+            Mapel = v.findViewById(R.id.tvNamaMapel);
+            Guru = v.findViewById(R.id.tvNamaGuru);
+            Mulai = v.findViewById(R.id.tvMulai);
+            Selesai = v.findViewById(R.id.tvSelesai);
+            card = v.findViewById(R.id.LayoutCardView);
         }
     }
 }
+
+

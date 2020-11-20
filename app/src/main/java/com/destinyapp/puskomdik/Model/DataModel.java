@@ -278,6 +278,76 @@ public class DataModel {
     @Expose
     public String tugas_created_at;
 
+    //Kelas
+    @SerializedName("id_tahun_ajaran")
+    @Expose
+    public String id_tahun_ajaran;
+
+    @SerializedName("id_penjurusan")
+    @Expose
+    public String id_penjurusan;
+
+    @SerializedName("kelas_ke")
+    @Expose
+    public String kelas_ke;
+
+    //Ujian
+    @SerializedName("id_ujian")
+    @Expose
+    public String id_ujian;
+
+    @SerializedName("tgl_ujian")
+    @Expose
+    public String tgl_ujian;
+
+    @SerializedName("tgl_tambah_ujian")
+    @Expose
+    public String tgl_tambah_ujian;
+
+    @SerializedName("id_ujian_jadwal")
+    @Expose
+    public String id_ujian_jadwal;
+
+    @SerializedName("isi_ujian")
+    @Expose
+    public String isi_ujian;
+
+    //Profile Sekolah
+    @SerializedName("nama_sekolah")
+    @Expose
+    public String nama_sekolah;
+
+    @SerializedName("alamat_sekolah")
+    @Expose
+    public String alamat_sekolah;
+
+    @SerializedName("akreditasi_sekolah")
+    @Expose
+    public String akreditasi_sekolah;
+
+    @SerializedName("npsn")
+    @Expose
+    public String npsn;
+
+    @SerializedName("no_izin_sekolah")
+    @Expose
+    public String no_izin_sekolah;
+
+    @SerializedName("kepala_sekolah")
+    @Expose
+    public String kepala_sekolah;
+
+    @SerializedName("nama_yayasan")
+    @Expose
+    public String nama_yayasan;
+
+    @SerializedName("ketua_yayasan")
+    @Expose
+    public String ketua_yayasan;
+
+    @SerializedName("logo_sekolah")
+    @Expose
+    public String logo_sekolah;
 
 
     //GETTER SETTER
@@ -800,5 +870,141 @@ public class DataModel {
 
     public void setTugas_created_at(String tugas_created_at) {
         this.tugas_created_at = tugas_created_at;
+    }
+
+    public String getId_tahun_ajaran() {
+        return id_tahun_ajaran;
+    }
+
+    public void setId_tahun_ajaran(String id_tahun_ajaran) {
+        this.id_tahun_ajaran = id_tahun_ajaran;
+    }
+
+    public String getId_penjurusan() {
+        return id_penjurusan;
+    }
+
+    public void setId_penjurusan(String id_penjurusan) {
+        this.id_penjurusan = id_penjurusan;
+    }
+
+    public String getKelas_ke() {
+        return kelas_ke;
+    }
+
+    public void setKelas_ke(String kelas_ke) {
+        this.kelas_ke = kelas_ke;
+    }
+
+    public String getId_ujian() {
+        return id_ujian;
+    }
+
+    public void setId_ujian(String id_ujian) {
+        this.id_ujian = id_ujian;
+    }
+
+    public String getTgl_ujian() {
+        return tgl_ujian;
+    }
+
+    public void setTgl_ujian(String tgl_ujian) {
+        this.tgl_ujian = tgl_ujian;
+    }
+
+    public String getTgl_tambah_ujian() {
+        return tgl_tambah_ujian;
+    }
+
+    public void setTgl_tambah_ujian(String tgl_tambah_ujian) {
+        this.tgl_tambah_ujian = tgl_tambah_ujian;
+    }
+
+    public String getId_ujian_jadwal() {
+        return id_ujian_jadwal;
+    }
+
+    public void setId_ujian_jadwal(String id_ujian_jadwal) {
+        this.id_ujian_jadwal = id_ujian_jadwal;
+    }
+
+    public String getIsi_ujian() {
+        return isi_ujian;
+    }
+
+    public void setIsi_ujian(String isi_ujian) {
+        this.isi_ujian = isi_ujian;
+    }
+
+    public String getNama_sekolah() {
+        return nama_sekolah;
+    }
+
+    public void setNama_sekolah(String nama_sekolah) {
+        this.nama_sekolah = nama_sekolah;
+    }
+
+    public String getAlamat_sekolah() {
+        return alamat_sekolah;
+    }
+
+    public void setAlamat_sekolah(String alamat_sekolah) {
+        this.alamat_sekolah = alamat_sekolah;
+    }
+
+    public String getAkreditasi_sekolah() {
+        return akreditasi_sekolah;
+    }
+
+    public void setAkreditasi_sekolah(String akreditasi_sekolah) {
+        this.akreditasi_sekolah = akreditasi_sekolah;
+    }
+
+    public String getNpsn() {
+        return npsn;
+    }
+
+    public void setNpsn(String npsn) {
+        this.npsn = npsn;
+    }
+
+    public String getNo_izin_sekolah() {
+        return no_izin_sekolah;
+    }
+
+    public void setNo_izin_sekolah(String no_izin_sekolah) {
+        this.no_izin_sekolah = no_izin_sekolah;
+    }
+
+    public String getKepala_sekolah() {
+        return kepala_sekolah;
+    }
+
+    public void setKepala_sekolah(String kepala_sekolah) {
+        this.kepala_sekolah = kepala_sekolah;
+    }
+
+    public String getNama_yayasan() {
+        return nama_yayasan;
+    }
+
+    public void setNama_yayasan(String nama_yayasan) {
+        this.nama_yayasan = nama_yayasan;
+    }
+
+    public String getKetua_yayasan() {
+        return ketua_yayasan;
+    }
+
+    public void setKetua_yayasan(String ketua_yayasan) {
+        this.ketua_yayasan = ketua_yayasan;
+    }
+
+    public String getLogo_sekolah() {
+        return logo_sekolah;
+    }
+
+    public void setLogo_sekolah(String logo_sekolah) {
+        this.logo_sekolah = logo_sekolah;
     }
 }

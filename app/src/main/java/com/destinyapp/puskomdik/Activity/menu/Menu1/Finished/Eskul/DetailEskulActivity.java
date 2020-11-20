@@ -1,6 +1,8 @@
 package com.destinyapp.puskomdik.Activity.menu.Menu1.Finished.Eskul;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentActivity;
+import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -16,11 +18,14 @@ import com.bumptech.glide.Glide;
 import com.destinyapp.puskomdik.API.ApiRequest;
 import com.destinyapp.puskomdik.API.RetroServer;
 import com.destinyapp.puskomdik.Activity.Adapter.AdapterEskul;
+import com.destinyapp.puskomdik.Activity.Adapter.TabPagerAdapter;
 import com.destinyapp.puskomdik.Activity.LoginActivity;
 import com.destinyapp.puskomdik.Method.Destiny;
 import com.destinyapp.puskomdik.Model.ResponseModel;
 import com.destinyapp.puskomdik.R;
 import com.destinyapp.puskomdik.SharedPreferance.DB_Helper;
+import com.google.android.material.appbar.AppBarLayout;
+import com.google.android.material.tabs.TabLayout;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -33,10 +38,14 @@ public class DetailEskulActivity extends AppCompatActivity {
     String Username,Password,Nama,Token,Level,Photo;
 
     //DETAIL Eskul
-    String ID_ESKUL,ESKUL,DESKRIPSI,PEMBIMBING,GAMBAR;
+    String ID_ESKUL;
     TextView eskul,deskripsi,pembimbing;
     ImageView gambar;
-    LinearLayout gabung;
+
+    private TabLayout Table;
+    private AppBarLayout appBar;
+    private ViewPager viewPager;
+    private FragmentActivity context;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,6 +73,14 @@ public class DetailEskulActivity extends AppCompatActivity {
                 Photo = cursor.getString(5);
             }
         }
+        Table = findViewById(R.id.tableLayout);
+        viewPager = findViewById(R.id.viewpager);
+        TabPagerAdapter adapter = new TabPagerAdapter(getSupportFragmentManager());
+        adapter.AddFragment(new DetailEskulFragment(),"Detail");
+        adapter.AddFragment(new AnggotaEskulFragment(),"Anggota");
+        adapter.AddFragment(new GalleryEskulFragment(),"Gallery");
+        viewPager.setAdapter(adapter);
+        Table.setupWithViewPager(viewPager);
     }
     private void ONCLICK(){
         Back.setOnClickListener(new View.OnClickListener() {
@@ -72,64 +89,12 @@ public class DetailEskulActivity extends AppCompatActivity {
                 onBackPressed();
             }
         });
-        gabung.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ApiRequest api = RetroServer.getClient().create(ApiRequest.class);
-                Call<ResponseModel> Apply = api.ApplyEskul(destiny.AUTH(Token),Token);
-                Apply.enqueue(new Callback<ResponseModel>() {
-                    @Override
-                    public void onResponse(Call<ResponseModel> call, Response<ResponseModel> response) {
-                        try {
-                            if (response.body().getStatusCode().equals("000")){
-                                Toast.makeText(DetailEskulActivity.this, "Anda Berhasil Terdaftar Dalam Eskul "+ESKUL, Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(DetailEskulActivity.this, EskulActivity.class);
-                                startActivity(intent);
-                                finish();
-                            }else if (response.body().getStatusCode().equals("001") || response.body().getStatusCode().equals("002")){
-                                destiny.AutoLogin(Username,Password,DetailEskulActivity.this);
-                                Toast.makeText(DetailEskulActivity.this, "Silahkan Coba Lagi", Toast.LENGTH_SHORT).show();
-                            }else{
-                                Toast.makeText(DetailEskulActivity.this, "Terjadi Kesalahan ", Toast.LENGTH_SHORT).show();
-                            }
-                        }catch (Exception e){
-                            Toast.makeText(DetailEskulActivity.this, "Terjadi Kesalahan User akan Terlogout", Toast.LENGTH_SHORT).show();
-                            dbHelper.Logout();
-                            Intent intent = new Intent(DetailEskulActivity.this, LoginActivity.class);
-                            startActivity(intent);
-                            finish();
-                        }
-                    }
-
-                    @Override
-                    public void onFailure(Call<ResponseModel> call, Throwable t) {
-                        Toast.makeText(DetailEskulActivity.this, "Koneksi Gagal", Toast.LENGTH_SHORT).show();
-                    }
-                });
-            }
-        });
     }
     private void Declaration(){
         Back = findViewById(R.id.relativeBack);
-        eskul = findViewById(R.id.tvNamaEskul);
-        deskripsi = findViewById(R.id.tvDeskripsiEskul);
-        pembimbing = findViewById(R.id.tvPembimbing);
-        gambar = findViewById(R.id.ivGambar);
-        gabung = findViewById(R.id.linearBergabung);
     }
     private void GETDATA(){
         Intent intent = getIntent();
         ID_ESKUL = intent.getExtras().getString("ID_ESKUL");
-        ESKUL = intent.getExtras().getString("ESKUL");
-        DESKRIPSI = intent.getExtras().getString("DESKRIPSI");
-        PEMBIMBING = intent.getExtras().getString("TANGGAL");
-        GAMBAR = intent.getExtras().getString("GAMBAR");
-        eskul.setText(ESKUL);
-        deskripsi.setText(DESKRIPSI);
-        pembimbing.setText(PEMBIMBING);
-        Glide.with(this)
-                .load(GAMBAR)
-                .into(gambar);
-        Toast.makeText(this, ID_ESKUL, Toast.LENGTH_SHORT).show();
     }
 }

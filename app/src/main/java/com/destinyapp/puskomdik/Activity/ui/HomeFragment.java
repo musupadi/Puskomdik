@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -20,6 +21,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 
+import com.bumptech.glide.Glide;
 import com.destinyapp.puskomdik.API.ApiRequest;
 import com.destinyapp.puskomdik.API.RetroServer;
 import com.destinyapp.puskomdik.Activity.Adapter.AdapterKabarBerita;
@@ -70,7 +72,8 @@ import retrofit2.Response;
 public class HomeFragment extends Fragment {
 
     Switch SwitchMasuk;
-    TextView CheckMasuk,Poin;
+    TextView CheckMasuk,Poin,SekolahBesar,Sekolah;
+    ImageView Logo;
     LinearLayout ProfilSekolah,AgendaSekolah,Eskul,Loker,KabarSekolah,KabarBerita,Prestasi,PPDB,StrukturSekolah,JadwalPelajaran,LihatSemua;
     //DIALOG 1
     LinearLayout DProfilSekolah,DAgendaSekolah,DEskul,DLoker,DKabarBerita,DPrestasi,DPPDB,DStrukturSekolah,DJadwalPelajaran,DKehadiran,DEHadir,DTugas,DTeman,DUjian,DEraport;
@@ -127,6 +130,9 @@ public class HomeFragment extends Fragment {
         KabarBerita = view.findViewById(R.id.linearLihatSemuaKabarBerita);
         LihatSemua = view.findViewById(R.id.linearLihatSemua);
         Poin = view.findViewById(R.id.tvPoint);
+        Logo = view.findViewById(R.id.ivLogoSekolah);
+        SekolahBesar = view.findViewById(R.id.tvSekolahBesar);
+        Sekolah = view.findViewById(R.id.tvNamaSekolah);
         dialog = new Dialog(getActivity());
         dialog.setContentView(R.layout.dialog_menu_all);
         dialog.getWindow().setLayout(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
@@ -164,11 +170,12 @@ public class HomeFragment extends Fragment {
                 }
             }
         });
+        GetPoint();
+        GetSekolah();
         ONCLICK();
         ONCLICKDIALOG();
         Header();
         KabarBerita();
-        GetPoint();
     }
     private void GetPoint(){
         ApiRequest api = RetroServer.getClient().create(ApiRequest.class);
@@ -179,6 +186,42 @@ public class HomeFragment extends Fragment {
                 try {
                     if (response.body().getStatusCode().equals("000")){
                         Poin.setText(response.body().getData().get(0).getPoin());
+                    }else if (response.body().getStatusCode().equals("001") || response.body().getStatusCode().equals("002")){
+                        destiny.AutoLogin(Username,Password,getActivity());
+                        Intent intent = new Intent(getActivity(), MainActivity.class);
+                        startActivity(intent);
+                        getActivity().finish();
+                    }else{
+                        Toast.makeText(getActivity(), "Terjadi Kesalahan ", Toast.LENGTH_SHORT).show();
+                    }
+                }catch (Exception e){
+                    Toast.makeText(getActivity(), "Terjadi Kesalahan User akan Terlogout", Toast.LENGTH_SHORT).show();
+                    dbHelper.Logout();
+                    Intent intent = new Intent(getActivity(), LoginActivity.class);
+                    startActivity(intent);
+                    getActivity().finish();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ResponseModel> call, Throwable t) {
+                Toast.makeText(getActivity(), "Koneksi Gagal", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+    private void GetSekolah(){
+        ApiRequest api = RetroServer.getClient().create(ApiRequest.class);
+        Call<ResponseModel> Point = api.ProfileSekolah(destiny.AUTH(Token));
+        Point.enqueue(new Callback<ResponseModel>() {
+            @Override
+            public void onResponse(Call<ResponseModel> call, Response<ResponseModel> response) {
+                try {
+                    if (response.body().getStatusCode().equals("000")){
+                        Sekolah.setText(response.body().getData().get(0).getNama_sekolah());
+                        SekolahBesar.setText(response.body().getData().get(0).getNama_sekolah());
+                        Glide.with(getActivity())
+                                .load(destiny.BASE_URL()+response.body().getData().get(0).getLogo_sekolah())
+                                .into(Logo);
                     }else if (response.body().getStatusCode().equals("001") || response.body().getStatusCode().equals("002")){
                         destiny.AutoLogin(Username,Password,getActivity());
                         Intent intent = new Intent(getActivity(), MainActivity.class);

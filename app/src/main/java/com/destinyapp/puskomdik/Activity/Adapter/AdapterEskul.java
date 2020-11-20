@@ -17,20 +17,21 @@ import com.destinyapp.puskomdik.Activity.menu.Menu1.Finished.Eskul.DetailEskulAc
 import com.destinyapp.puskomdik.Activity.menu.Menu1.Finished.KabarSekolah.DetailKabarSekolahActivity;
 import com.destinyapp.puskomdik.Method.Destiny;
 import com.destinyapp.puskomdik.Model.DataModel;
+import com.destinyapp.puskomdik.Model.Eskul.Eskul;
 import com.destinyapp.puskomdik.R;
 import com.destinyapp.puskomdik.SharedPreferance.DB_Helper;
 
 import java.util.List;
 
 public class AdapterEskul extends RecyclerView.Adapter<AdapterEskul.HolderData> {
-    private List<DataModel> mList;
+    private List<Eskul> mList;
     private Context ctx;
 
     DB_Helper dbHelper;
     Boolean onClick=false;
     RecyclerView recyclerView;
     Destiny destiny;
-    public AdapterEskul(Context ctx, List<DataModel> mList){
+    public AdapterEskul(Context ctx, List<Eskul> mList){
         this.ctx = ctx;
         this.mList = mList;
     }
@@ -46,7 +47,7 @@ public class AdapterEskul extends RecyclerView.Adapter<AdapterEskul.HolderData> 
     @Override
     public void onBindViewHolder(@NonNull final HolderData holderData, int posistion) {
         destiny = new Destiny();
-        final DataModel dm = mList.get(posistion);
+        final Eskul dm = mList.get(posistion);
         holderData.Judul.setText(dm.getNama_ekskul());
 //        holderData.Deskripsi.setText(destiny.SmallDescription(dm.getIsi_kabar()));
 //        holderData.Tanggal.setText(dm.getCreated_at_kabar());
@@ -58,10 +59,6 @@ public class AdapterEskul extends RecyclerView.Adapter<AdapterEskul.HolderData> 
             public void onClick(View view) {
                 Intent i = new Intent(ctx, DetailEskulActivity.class);
                 i.putExtra("ESKUL", dm.getNama_ekskul());
-                i.putExtra("DESKRIPSI",dm.getDeskripsi_ekskul());
-                i.putExtra("PEMBIMBING",dm.getPembimbing_ekskul());
-                i.putExtra("ID_ESKUL",dm.getId_ekskul());
-                i.putExtra("GAMBAR",destiny.BASE_URL()+dm.getCover_ekskul());
                 ctx.startActivity(i);
             }
         });

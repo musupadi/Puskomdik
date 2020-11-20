@@ -42,8 +42,8 @@ public class AdapterTugas extends RecyclerView.Adapter<AdapterTugas.HolderData> 
     public void onBindViewHolder(@NonNull final HolderData holderData, int posistion) {
         destiny = new Destiny();
         final DataModel dm = mList.get(posistion);
-        holderData.Mapel.setText(dm.getId_mapel());
-        holderData.Guru.setText(dm.getId_guru());
+        holderData.Mapel.setText(dm.getNama_mapel());
+        holderData.Guru.setText(dm.getNama_guru());
         holderData.Mulai.setText(destiny.MagicDateChange(dm.getTgl_mulai()));
         holderData.Selesai.setText(destiny.MagicDateChange(dm.getTgl_selesai()));
     }

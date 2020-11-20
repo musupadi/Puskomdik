@@ -14,6 +14,7 @@ import android.widget.Toast;
 import com.destinyapp.puskomdik.API.ApiRequest;
 import com.destinyapp.puskomdik.API.RetroServer;
 import com.destinyapp.puskomdik.Activity.Adapter.AdapterTeman;
+import com.destinyapp.puskomdik.Activity.Adapter.AdapterUjian;
 import com.destinyapp.puskomdik.Activity.LoginActivity;
 import com.destinyapp.puskomdik.Activity.menu.Menu1.Finished.TemanActivity;
 import com.destinyapp.puskomdik.Method.Destiny;
@@ -57,7 +58,7 @@ public class UjianActivity extends AppCompatActivity {
                 Photo = cursor.getString(5);
             }
         }
-//        Logic();
+        Logic();
         Back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -66,17 +67,17 @@ public class UjianActivity extends AppCompatActivity {
         });
     }
     private void Logic(){
-        mManager = new GridLayoutManager(UjianActivity.this,2);
+        mManager = new GridLayoutManager(UjianActivity.this,1);
         recycler.setLayoutManager(mManager);
         ApiRequest api = RetroServer.getClient().create(ApiRequest.class);
-        Call<ResponseModel> Temans = api.Teman(destiny.AUTH(Token),"2");
-        Temans.enqueue(new Callback<ResponseModel>() {
+        Call<ResponseModel> Ujians = api.Ujian(destiny.AUTH(Token));
+        Ujians.enqueue(new Callback<ResponseModel>() {
             @Override
             public void onResponse(Call<ResponseModel> call, Response<ResponseModel> response) {
                 try {
                     if (response.body().getStatusCode().equals("000")){
                         mItems=response.body().getData();
-                        mAdapter = new AdapterTeman(UjianActivity.this,mItems);
+                        mAdapter = new AdapterUjian(UjianActivity.this,mItems);
                         recycler.setAdapter(mAdapter);
                         mAdapter.notifyDataSetChanged();
                     }else if (response.body().getStatusCode().equals("001") || response.body().getStatusCode().equals("002")){

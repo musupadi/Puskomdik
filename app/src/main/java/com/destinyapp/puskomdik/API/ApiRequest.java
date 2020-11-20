@@ -2,6 +2,7 @@ package com.destinyapp.puskomdik.API;
 
 
 
+import com.destinyapp.puskomdik.Model.Eskul.Response;
 import com.destinyapp.puskomdik.Model.ResponseModel;
 
 import java.util.ArrayList;
@@ -51,7 +52,11 @@ public interface ApiRequest {
     Call<ResponseModel> Prestasi(@Header("Authorization") String authHeader);
 
     @GET("ekskul?self=true")
-    Call<ResponseModel> EskulAll(@Header("Authorization") String authHeader);
+    Call<Response> EskulAll(@Header("Authorization") String authHeader);
+
+    @GET("ekskul")
+    Call<Response> EskulAll(@Header("Authorization") String authHeader,
+                            @Query("id_eskul") String idEskul);
 
     @GET("ekskul_self")
     Call<ResponseModel> EskulSelf(@Header("Authorization") String authHeader);
@@ -76,5 +81,14 @@ public interface ApiRequest {
 
     @GET("tugas")
     Call<ResponseModel> Tugas(@Header("Authorization") String authHeader);
+
+    @GET("kelas_all")
+    Call<ResponseModel> KelasAll(@Header("Authorization") String authHeader);
+
+    @GET("ujian")
+    Call<ResponseModel> Ujian(@Header("Authorization") String authHeader);
+
+    @GET("profilsekolah")
+    Call<ResponseModel> ProfileSekolah(@Header("Authorization") String authHeader);
 
 }

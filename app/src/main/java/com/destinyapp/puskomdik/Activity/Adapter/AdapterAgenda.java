@@ -48,7 +48,7 @@ public class AdapterAgenda extends RecyclerView.Adapter<AdapterAgenda.HolderData
         destiny = new Destiny();
         final DataModel dm = mList.get(posistion);
         holderData.Judul.setText(dm.getJudul_agenda());
-        holderData.Deskripsi.setText(destiny.SmallDescription(dm.getIsi_agenda()));
+        holderData.Deskripsi.setText(destiny.SmallDescription(destiny.FilterTextToJava(dm.getIsi_agenda())));
         holderData.Tanggal.setText(dm.getCreated_at_agenda());
         Glide.with(ctx)
                 .load(destiny.BASE_URL()+dm.getCover_agenda())

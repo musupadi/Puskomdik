@@ -89,14 +89,10 @@
                             android:id="@+id/tvTanggal"
                             android:text="15-Januari-1994"
                             android:fontFamily="@font/roboto"/>
-                        <TextView
-                            android:layout_marginTop="10dp"
+                        <WebView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:text="Isi Kabar"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="@dimen/text_xtra_large"
-                            android:id="@+id/tvIsiKabar"/>
+                            android:id="@+id/webIsi"/>
                     </LinearLayout>
                 </ScrollView>
 

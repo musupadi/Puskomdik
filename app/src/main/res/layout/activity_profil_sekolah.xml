@@ -67,8 +67,10 @@
                         <de.hdodenhof.circleimageview.CircleImageView
                             android:layout_width="match_parent"
                             android:layout_height="180dp"
-                            android:src="@drawable/tk"/>
+                            android:src="@drawable/tk"
+                            android:id="@+id/ivLogo"/>
                         <TextView
+                            android:id="@+id/tvNamaProfileSekolah"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Profil\nTK Explorer"
@@ -244,6 +246,7 @@
                                 android:layout_height="1dp"
                                 android:background="@color/colorBlack"/>
                             <TextView
+                                android:id="@+id/tvNPSN"
                                 android:textSize="@dimen/text_xtra_large"
                                 android:fontFamily="@font/roboto"
                                 android:layout_width="match_parent"

@@ -21,5 +21,32 @@ public class Response {
 
     @SerializedName("data")
     @Nullable
-    List<DataModel> data;
+    List<Eskul> data;
+
+    @Nullable
+    public String getStatusCode() {
+        return statusCode;
+    }
+
+    public void setStatusCode(@Nullable String statusCode) {
+        this.statusCode = statusCode;
+    }
+
+    @Nullable
+    public String getStatusMessage() {
+        return statusMessage;
+    }
+
+    public void setStatusMessage(@Nullable String statusMessage) {
+        this.statusMessage = statusMessage;
+    }
+
+    @Nullable
+    public List<Eskul> getData() {
+        return data;
+    }
+
+    public void setData(@Nullable List<Eskul> data) {
+        this.data = data;
+    }
 }

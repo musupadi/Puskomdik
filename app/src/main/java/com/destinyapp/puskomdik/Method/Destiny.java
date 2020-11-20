@@ -69,6 +69,27 @@ public class Destiny {
 //            ctx.startActivity(intent);
 //        }
     }
+    public String FilterTextToJava(String text){
+        String replaces = text.replace("</p>\\r\\n<ol>\\r\\n<li>","");
+        String replace1 = replaces.replace("<p>","");
+        String replace2 = replace1.replace("</p>","");
+        String replace3 = replace2.replace("<span style=\"color: #ff6600;\">","");
+        String replace4 = replace3.replace("</span>","");
+        String replace5 = replace4.replace("<strong>","");
+        String replace6 = replace5.replace("</strong>","");
+        String replace7 = replace6.replace("<ol>","");
+        String replace8 = replace7.replace("</ol>","");
+        String replace9 = replace8.replace("<li>","");
+        String replace10 = replace9.replace("</li>","");
+        String replace11 = replace10.replace("<ul>","");
+        String replace12 = replace11.replace("</ul>","");
+        String replace13 = replace12.replace("\\n\\n","\\n");
+        String replace14 = replace13.replace("<div>","");
+        String replace15 = replace14.replace("</div>","");
+        String replace16 = replace15.replace("<p>1.","");
+        String replace17 = replace16.replace("<p style=\\\"text-align: left;\\\">","");
+        return replace17;
+    }
     public void AutoLogin(String username,String password,Context ctx){
         DB_Helper dbHelper = new DB_Helper(ctx);
         ApiRequest api = RetroServer.getClient().create(ApiRequest.class);
