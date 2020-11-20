@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -48,6 +49,7 @@ public class AdapterAgenda extends RecyclerView.Adapter<AdapterAgenda.HolderData
         final DataModel dm = mList.get(posistion);
         holderData.Judul.setText(dm.getJudul_agenda());
         holderData.Deskripsi.setText(destiny.SmallDescription(destiny.FilterTextToJava(dm.getIsi_agenda())));
+        holderData.web.loadData(dm.getIsi_agenda(),"text/html","UTF-8");
         holderData.Tanggal.setText(dm.getCreated_at_agenda());
         Glide.with(ctx)
                 .load(destiny.BASE_URL()+dm.getCover_agenda())
@@ -74,11 +76,13 @@ public class AdapterAgenda extends RecyclerView.Adapter<AdapterAgenda.HolderData
         ImageView Image;
         TextView Judul,Deskripsi,Tanggal;
         LinearLayout card;
+        WebView web;
         public HolderData(View v){
             super(v);
             Image = v.findViewById(R.id.ivGambar);
             Judul = v.findViewById(R.id.tvJudul);
-            Deskripsi = v.findViewById(R.id.tvIsi);
+            web = v.findViewById(R.id.webDeskripsi);
+            Deskripsi = v.findViewById(R.id.tvDeskripsi);
             Tanggal = v.findViewById(R.id.tvTanggal);
             card = v.findViewById(R.id.LayoutCardView);
         }

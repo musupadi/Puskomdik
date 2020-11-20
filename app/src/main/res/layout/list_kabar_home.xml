@@ -66,7 +66,12 @@
                     android:text="Judul Kabar"
                     android:fontFamily="@font/roboto"
                     android:id="@+id/tvDeskripsi"
-                    android:textSize="@dimen/text_medium"/>
+                    android:textSize="@dimen/text_medium"
+                    android:visibility="gone"/>
+                <WebView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/webDeskripsi"/>
             </LinearLayout>
 
         </LinearLayout>

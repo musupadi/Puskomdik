@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -48,6 +49,7 @@ public class AdapterKabarBerita extends RecyclerView.Adapter<AdapterKabarBerita.
         final DataModel dm = mList.get(posistion);
         holderData.Judul.setText(dm.getJudul_kabar());
         holderData.Deskripsi.setText(destiny.SmallDescription(destiny.FilterTextToJava(dm.getIsi_kabar())));
+        holderData.web.loadData(dm.getIsi_kabar(),"text/html","UTF-8");
         holderData.Tanggal.setText(dm.getCreated_at_kabar());
         Glide.with(ctx)
                 .load(destiny.BASE_URL()+dm.getCover_kabar())
@@ -73,6 +75,7 @@ public class AdapterKabarBerita extends RecyclerView.Adapter<AdapterKabarBerita.
     class HolderData extends RecyclerView.ViewHolder{
         ImageView Image;
         TextView Judul,Deskripsi,Tanggal;
+        WebView web;
         LinearLayout card;
         public HolderData(View v){
             super(v);
@@ -80,6 +83,7 @@ public class AdapterKabarBerita extends RecyclerView.Adapter<AdapterKabarBerita.
             Judul = v.findViewById(R.id.tvJudul);
             Deskripsi = v.findViewById(R.id.tvDeskripsi);
             Tanggal = v.findViewById(R.id.tvTanggal);
+            web = v.findViewById(R.id.webDeskripsi);
             card = v.findViewById(R.id.LayoutCardView);
         }
     }

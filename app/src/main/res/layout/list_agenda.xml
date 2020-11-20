@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/card_view"
     android:layout_width="match_parent"
-    android:layout_height="300dp"
+    android:layout_height="400dp"
     android:layout_gravity="center">
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -30,7 +30,7 @@
                 app:cardElevation="2dp"
                 android:layout_margin="10dp"
                 android:padding="5dp"
-                android:layout_weight="1">
+                android:layout_weight="1.5">
                 <ImageView
                     android:scaleType="fitXY"
                     android:layout_width="match_parent"
@@ -61,10 +61,16 @@
                     android:textSize="@dimen/text_xtra_large"/>
                 <TextView
                     android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Judul Kabar"
+                    android:fontFamily="@font/roboto"
+                    android:id="@+id/tvDeskripsi"
+                    android:textSize="@dimen/text_medium"
+                    android:visibility="gone"/>
+                <WebView
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="Deskripsi"
-                    android:id="@+id/tvIsi"
-                    android:textSize="@dimen/text_medium"/>
+                    android:id="@+id/webDeskripsi"/>
             </LinearLayout>
 
         </LinearLayout>

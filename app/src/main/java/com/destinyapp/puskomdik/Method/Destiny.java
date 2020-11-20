@@ -88,6 +88,7 @@ public class Destiny {
         String replace15 = replace14.replace("</div>","");
         String replace16 = replace15.replace("<p>1.","");
         String replace17 = replace16.replace("<p style=\\\"text-align: left;\\\">","");
+        String replace18 = replace17.replace("<a href=","");
         return replace17;
     }
     public void AutoLogin(String username,String password,Context ctx){
