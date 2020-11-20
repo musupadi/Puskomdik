@@ -40,7 +40,7 @@ public class AdapterSpinner extends ArrayAdapter<DataModel> {
         DataModel currentItem = getItem(position);
 
         if (currentItem != null) {
-            textSpinner.setText("  "+currentItem.getNama_kelas());
+            textSpinner.setText(currentItem.getNama_kelas());
             textId.setText(currentItem.getId_kelas());
         }
 

@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.RelativeLayout;
@@ -67,11 +68,16 @@ public class TemanActivity extends AppCompatActivity {
         GetKelas();
         spKelas.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                DataModel clickedItem = (DataModel) adapterView.getItemAtPosition(i);
-                String clickedItems = clickedItem.getId_kelas();
-                idKelas.setText(clickedItems);
-                Logic();
+            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long ld) {
+                try {
+                    DataModel clickedItem = (DataModel) adapterView.getItemAtPosition(position);
+                    String clickedItems = clickedItem.getId_kelas();
+                    idKelas.setText(clickedItems);
+                    Logic();
+                }catch (Exception e){
+                    Log.i("Error : ",e.toString());
+                    Toast.makeText(TemanActivity.this, "Terjadi Kesalahan", Toast.LENGTH_SHORT).show();
+                }
             }
 
             @Override

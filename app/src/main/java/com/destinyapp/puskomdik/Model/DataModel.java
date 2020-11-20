@@ -1007,4 +1007,6 @@ public class DataModel {
     public void setLogo_sekolah(String logo_sekolah) {
         this.logo_sekolah = logo_sekolah;
     }
+
+
 }

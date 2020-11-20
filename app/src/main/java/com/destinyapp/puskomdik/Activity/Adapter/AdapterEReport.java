@@ -48,7 +48,7 @@ public class AdapterEReport extends RecyclerView.Adapter<AdapterEReport.HolderDa
         holderData.card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(dm.getLink_file_raport()));
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(destiny.BASE_URL()+dm.getLink_file_raport()));
                 ctx.startActivity(browserIntent);
             }
         });
